@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Coaching from "../assets/icons/header/coaching.png";
 import Check from "../assets/icons/header/check.png";
-import Model from "../assets/images/header/model.png";
+import Model from "../assets/icons/header/model.svg";
 import { Mission, Vision } from "../data";
 
 export const Header = () => {
@@ -23,8 +23,9 @@ export const Header = () => {
 
     return (
         <div className="
+            snap-start
             flex flex-col
-            text-black h-screen bg-[#F2F2F2]
+            text-black h-screen bg-[#fff]
             md:flex-row ">
             {/* Left Section */}
             <div className="w-full flex flex-col items-start
@@ -41,7 +42,7 @@ export const Header = () => {
                     </a>
                 </div>
                 {/* mission vision button */}
-                <div className="flex my-20">
+                <div className="flex my-20 shadow-2xl">
                     <button onClick={() => handleButtonClick(1)} className={buttonClass(1)}>
                         Mission
                     </button>
