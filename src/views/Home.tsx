@@ -1,5 +1,6 @@
 import { About } from "../components/about"
 import { Feedback } from "../components/feedback"
+import { Footer } from "../components/footer"
 import { Header } from "../components/header"
 
 
@@ -9,6 +10,7 @@ export const Home = () => {
             <Header />
             <About />
             <Feedback />
+            <Footer />
         </div>
     )
 }
