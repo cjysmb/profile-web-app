@@ -9,7 +9,7 @@ export const About = () => {
     const cardDefaultIconClass = "w-16 h-16 absolute";
 
     return (
-        <div className="w-full bg-[#F5F6FA] snap-start
+        <section className="w-full bg-[#F5F6FA] snap-start
         flex flex-col items-center 
         p-8
         2xl:px-40 2xl:py-[120px]">
@@ -39,6 +39,6 @@ export const About = () => {
                 </div>
             ))}
             </div>
-        </div>
+        </section>
     );
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Coaching from "../assets/icons/header/coaching.png";
+import Logo from "../assets/icons/header/logo.svg";
 import Check from "../assets/icons/header/check.png";
 import Model from "../assets/icons/header/model.svg";
 import { Mission, Vision } from "../data";
@@ -22,7 +22,7 @@ export const Header = () => {
     const textClass = "text[#2D302D] font-normal text-balance w-[3/4] text-[16px] sm:text-[18px] md:text-[20px]";
 
     return (
-        <div className="
+        <section className="
             snap-start
             flex flex-col
             text-black h-screen bg-[#fff]
@@ -38,7 +38,7 @@ export const Header = () => {
                 {/* header icon */}
                 <div className="flex items-start">
                     <a href="/">
-                        <img src={Coaching} alt="Logo" />
+                        <img src={Logo} alt="Logo" />
                     </a>
                 </div>
                 {/* mission vision button */}
@@ -75,9 +75,12 @@ export const Header = () => {
                     )}
             </div>
             {/* WIP */}
-            <div className="w-hull h-full hidden lg:block">
+            <div className="hidden 
+            xl:w-full xl:h-full xl:block
+            2xl:w-auto 2xl:h-auto
+            ">
                 <img src={Model} alt="Model" className="h-full" />
             </div>
-        </div>
+        </section>
     );
 }
