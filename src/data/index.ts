@@ -40,3 +40,50 @@ export const AboutUs = {
         },
     ]
 };
+
+export const Testimonials = {
+    title: "Client's Feedback",
+    clients: [
+        {
+            name: "Marie, COO",
+            statement: "Coach Johannes has helped me to be on track of my goals to having a healthy lifestyle, not only for myself, but for my family as well.",
+            star: 5
+        },
+        {
+            name: "Jessica, Business Coach",
+            statement: "“It was great working with Johannes! He is highly commendable especially in getting me back on track & regaining my positivity despite a \"hiccup\". He is emphatic and yet remains objective of the goals set. A good listener indeed!”",
+            star: 5
+        },
+        {
+            name: "Marie, COO",
+            statement: "Coach Johannes has helped me to be on track of my goals to having a healthy lifestyle, not only for myself, but for my family as well.",
+            star: 3
+        },
+        {
+            name: "Jessica, Business Coach",
+            statement: "“It was great working with Johannes! He is highly commendable especially in getting me back on track & regaining my positivity despite a \"hiccup\". He is emphatic and yet remains objective of the goals set. A good listener indeed!”",
+            star: 2
+        },
+        {
+            name: "Marie, COO",
+            statement: "Coach Johannes has helped me to be on track of my goals to having a healthy lifestyle, not only for myself, but for my family as well.",
+            star: 4
+        },
+        {
+            name: "Jessica, Business Coach",
+            statement: "“It was great working with Johannes! He is highly commendable especially in getting me back on track & regaining my positivity despite a \"hiccup\". He is emphatic and yet remains objective of the goals set. A good listener indeed!”",
+            star: 5
+        },
+        {
+            name: "Marie, COO",
+            statement: "Coach Johannes has helped me to be on track of my goals to having a healthy lifestyle, not only for myself, but for my family as well.",
+            star: 4
+        },
+        {
+            name: "Jessica, Business Coach",
+            statement: "“It was great working with Johannes! He is highly commendable especially in getting me back on track & regaining my positivity despite a \"hiccup\". He is emphatic and yet remains objective of the goals set. A good listener indeed!”",
+            star: 5
+        },
+
+    ]
+}
