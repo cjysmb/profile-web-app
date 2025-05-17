@@ -6,8 +6,8 @@ export const Feedback = () => {
     px-[32px] py-[8px] w-[280px] text-[16px] text-center
     md:px-[48px] py-[16px] md:w-[300px] md:text-[20px]
     `;
-    const nameClass = "text-left font-semibold text-[16px] leading-[20px]";
-    const statementClass = "text-left text-pretty w-full italic mt-2 font-normal text-[16px] leading-[20px]";
+    const  nameClass = "text-[#2D302D] text-left font-semibold text-[16px] leading-[20px]";
+    const statementClass = "text-[#2D302D] text-left text-pretty w-full italic mt-2 font-normal text-[16px] leading-[20px]";
 
     return (
         <section className="w-full flex flex-col items-center
