@@ -3,6 +3,7 @@ import Logo from "../assets/icons/header/logo.svg";
 import Check from "../assets/icons/header/check.png";
 import Model from "../assets/icons/header/model.svg";
 import { Mission, Vision } from "../data";
+import { headerTextClass } from "../styles/common";
 
 export const Header = () => {
     const [activeButton, setActiveButton] = useState(1);
@@ -18,8 +19,8 @@ export const Header = () => {
         `;
     }
 
-    const headerClass = "text-[#5B7D7E] font-bold text-[24px] md:text-[24px] lg:text-[28px] 2xl:text-[32px]";
     const textClass = "text[#2D302D] font-normal text-pretty w-[3/4] text-[16px] sm:text-[18px] md:text-[20px]";
+    const buttonList = ['Mission', 'Vision'];
 
     return (
         <section className="
@@ -43,18 +44,17 @@ export const Header = () => {
                 </div>
                 {/* mission vision button */}
                 <div className="flex my-20 shadow-2xl">
-                    <button onClick={() => handleButtonClick(1)} className={buttonClass(1)}>
-                        Mission
-                    </button>
-                    <button onClick={() => handleButtonClick(2)} className={buttonClass(2)}>
-                        Vision
-                    </button>
+                    {buttonList.map((button, index) => (
+                        <button key={index} onClick={() => handleButtonClick(index + 1)} className={buttonClass(index + 1)}>
+                            {button}
+                        </button>
+                    ))}
                 </div>
                 {/* mission vision content div */}
                 {activeButton === 1 ? (
                         // mission content
                         <div>
-                            <h2 className={headerClass}>{Mission.title}</h2>
+                            <h2 className={headerTextClass}>{Mission.title}</h2>
                             <ul className="space-y-3 mt-8 list-none">
                             {Mission.items.map((item, index) => (
                                 <li className="flex items-center" key={"mission" + index}>
@@ -69,7 +69,7 @@ export const Header = () => {
                     ) : (
                         // vision content
                         <div>
-                            <h2 className={headerClass}>{Vision.title}</h2>
+                            <h2 className={headerTextClass}>{Vision.title}</h2>
                             <p className={textClass}>{Vision.description}</p>
                         </div>
                     )}
