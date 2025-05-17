@@ -1,8 +1,8 @@
 import { AboutUs } from "../../data";
+import { headerTextClass } from "../../styles/common";
 
 export const About = () => {
-    const headerTextClass = "text-[#728C69] font-bold text-[16px] sm:text-[18px] uppercase";
-    const descriptionTextClass = "mt-[20px] text-[#5B7D7E] font-bold text-balance text-center text-[20px] md:text-[32px] lg:text-[48px] w-full 2xl:w-[1080px] 2xl:text-pretty";
+    // const descriptionTextClass = "mt-[20px] text-[#5B7D7E] font-bold text-balance text-center text-[20px] md:text-[32px] lg:text-[48px] w-full 2xl:w-[1080px] 2xl:text-pretty";
     const cardDefaultClass = "m-auto bg-white relative rounded-bl-[48px] rounded-tr-[48px] rounded-tl-[16px] rounded-br-[16px] shadow-lg"
     const cardHeaderClass ="text-[#5B7D7E] font-bold text-[16px] sm:text-[18px]";
     const cardTextClass = "text-[#2D302D] font-normal text-pretty text-[16px] mt-4";
@@ -12,13 +12,13 @@ export const About = () => {
         <section className="w-full snap-start
         flex flex-col items-center 
         p-8
-        2xl:px-40 2xl:py-[120px]">
+        2xl:px-40">
             <span className={headerTextClass}>
                 {AboutUs.title}
             </span>
-            <span className={descriptionTextClass}>
+            {/* <span className={descriptionTextClass}>
                 {AboutUs.description}
-            </span>
+            </span> */}
             <div className="flex w-full mt-10
             flex-col
             md:flex-wrap
