@@ -59,9 +59,9 @@ export const Programs = () => {
 
 
     return (
-        <section className="w-full flex flex-col items-center
+        <section className="w-full flex flex-col items-center relative
         p-8
-        2xl:px-40 ">
+        2xl:px-40">
             <span className={headerTextClass}>
                 {OurPrograms.title}
             </span>
