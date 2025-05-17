@@ -1,4 +1,4 @@
-import { AboutUs } from "../data";
+import { AboutUs } from "../../data";
 
 export const About = () => {
     const headerTextClass = "text-[#728C69] font-bold text-[16px] sm:text-[18px] uppercase";
@@ -9,7 +9,7 @@ export const About = () => {
     const cardDefaultIconClass = "w-16 h-16 absolute";
 
     return (
-        <section className="w-full bg-[#F5F6FA] snap-start
+        <section className="w-full snap-start
         flex flex-col items-center 
         p-8
         2xl:px-40 2xl:py-[120px]">

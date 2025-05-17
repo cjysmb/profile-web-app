@@ -19,7 +19,7 @@ export const Header = () => {
     }
 
     const headerClass = "text-[#5B7D7E] font-bold text-[24px] md:text-[24px] lg:text-[28px] 2xl:text-[32px]";
-    const textClass = "text[#2D302D] font-normal text-balance w-[3/4] text-[16px] sm:text-[18px] md:text-[20px]";
+    const textClass = "text[#2D302D] font-normal text-pretty w-[3/4] text-[16px] sm:text-[18px] md:text-[20px]";
 
     return (
         <section className="
