@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { OurPrograms } from "../../data";
-import { headerTextClass } from "../../styles/common";
+import { defaultTextClass, headerTextClass } from "../../styles/common";
 import Quotation from "../../assets/icons/programs/quote.svg";
 
 export const Programs = () => {
@@ -39,7 +39,6 @@ export const Programs = () => {
     const defaultBoldText = "text-[#2D302D] font-bold text-[16px]";
     const defaultText = "text-[#2D302D] font-normal text-pretty text-[16px]";
     const programHeaderText = "text-[#5B7D7E] font-bold text-[18px]";
-    const programListText = "text-[#2D302D] font-normal text-pretty text-[16px]";
     const programDetailText = `${defaultBoldText} bg-[#EAF8F8] w-1/2 p-[12px]`;
     const programValueText = `${defaultText} bg-[#E6ECE3] w-1/2 p-[12px]`;
 
@@ -61,7 +60,7 @@ export const Programs = () => {
     return (
         <section className="w-full flex flex-col items-center relative
         p-8
-        2xl:px-40">
+        2xl:px-40 pb-40">
             <span className={headerTextClass}>
                 {OurPrograms.title}
             </span>
@@ -104,7 +103,7 @@ export const Programs = () => {
                                                 {program.items.map((list, index) => (
                                                     <li className="flex items-center" key={`program-list-${index}`}>
                                                         <div className="mt-1 mr-4 w-2 h-2 bg-[#728C69] rounded-full shrink-0" />
-                                                        <span className={programListText}>
+                                                        <span className={defaultTextClass}>
                                                             {list}
                                                         </span>
                                                     </li>

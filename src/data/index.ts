@@ -1,5 +1,6 @@
 import { Smiley, People, Plant, Eclipse } from "../assets/icons/about";
 import { Fruit, Smile, Stress } from "../assets/icons/programs";
+import Johannes from "../assets/images/coaches/johannes.svg";
 
 export const Mission = {
     title: "To Support Individuals in",
@@ -130,6 +131,31 @@ export const OurPrograms = {
                 }
             ]
         },
-        
+    ]
+};
+
+export const OurCoaches = {
+    title: "Our Coaches",
+    coaches: [
+        {
+            img: Johannes,
+            name: "Johannes Laue",
+            information: [
+                "B.S Sports Science",
+                "10 years of Personal Fitness Training experience",
+                "Certified Functional Medicine Health Coach",
+                "Advance Training for Mind-Body Medicine"
+            ]
+        },
+        {
+            img: Johannes,
+            name: "Christian Jaede Samboa",
+            information: [
+                "B.S Sports Science",
+                "10 years of Personal Fitness Training experience",
+                "Certified Functional Medicine Health Coach",
+                "Advance Training for Mind-Body Medicine"
+            ]
+        }
     ]
 }

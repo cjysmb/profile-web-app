@@ -1,5 +1,6 @@
 import { Programs } from "./programs";
 import LeftVector from "../../assets/icons/programs/vector_left.svg";
+import { Coaches } from "./coaches";
 
 export const OurProgram = () => {
   return (
@@ -11,6 +12,7 @@ export const OurProgram = () => {
         <img src={LeftVector} alt="vector_left" />
       </div>
       <Programs />
+      <Coaches />
     </div>
   );
 }
