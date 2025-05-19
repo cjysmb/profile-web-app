@@ -1,5 +1,6 @@
-import { Smiley, People, Plant, Eclipse } from "../assets/icons/about";
+import { Logo, People, Plant, Eclipse } from "../assets/icons/about";
 import { Fruit, Smile, Stress } from "../assets/icons/programs";
+import Johannes from "../assets/images/coaches/johannes.svg";
 
 export const Mission = {
     title: "To Support Individuals in",
@@ -22,22 +23,22 @@ export const AboutUs = {
     description: "Transforming Ordinary Into Extraordinary Fitness for Health Resolution",
     items: [
         {
-            icon: Smiley,
-            icon2: Eclipse,
-            title: "Self-Awareness",
-            description: "Tools and guidance to help you understand yourself, your strengths, and what truly matters to you."
-        },
-        {
             icon: People,
             icon2: Eclipse,
-            title: "Supportive Community",
-            description: "A safe space to grow with others, share experiences, and find encouragement."
+            description: "Coaching is a supportive alliance between coach and client.It is built on mutual respect, trust, and shared commitment.",
+            description1: "Both the coach and the client hold each other in positive regard, creating a space where each can grow, learn, and benefit equally from their interactions."
+        },
+        {
+            icon: Logo,
+            icon2: Eclipse,
+            description: "Our Compassionate Coaches Logo symbolizes this partnership — two people moving in harmony, dancing in the moment, and flowing with the rhythm of each session.",
+            description1: "It represents collaboration, resilience, and the joint effort to overcome challenges and achieve the client’s personal goals."
         },
         {
             icon: Plant,
             icon2: Eclipse,
-            title: "Purposeful Growth",
-            description: "Programs that nurture personal well-being and inspire actions for a better world."
+            description: "At Our Compassionate Coaches, we believe in working together, each coach bringing their unique strengths and expertise to support not only the client’s aspirations but also their own professional growth.",
+            description1: "Together, we cultivate a meaningful and impactful coaching journey."
         },
     ]
 };
@@ -130,6 +131,32 @@ export const OurPrograms = {
                 }
             ]
         },
-        
+    ]
+};
+
+export const OurCoaches = {
+    title: "Our Coach",
+    title2: "Our Coaches",
+    coaches: [
+        {
+            img: Johannes,
+            name: "Johannes Laue",
+            information: [
+                "B.S Sports Science",
+                "10 years of Personal Fitness Training experience",
+                "Certified Functional Medicine Health Coach",
+                "Advance Training for Mind-Body Medicine"
+            ]
+        },
+        {
+            img: Johannes,
+            name: "Johannes Laue",
+            information: [
+                "B.S Sports Science",
+                "10 years of Personal Fitness Training experience",
+                "Certified Functional Medicine Health Coach",
+                "Advance Training for Mind-Body Medicine"
+            ]
+        }
     ]
 }

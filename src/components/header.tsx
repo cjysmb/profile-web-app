@@ -26,8 +26,8 @@ export const Header = () => {
         <section className="
             snap-start
             flex flex-col
-            text-black h-screen bg-[#fff]
-            md:flex-row ">
+            text-black h-[80%]
+            md:flex-row">
             {/* Left Section */}
             <div className="w-full flex flex-col items-start
             p-8
@@ -35,7 +35,7 @@ export const Header = () => {
             md:px-16
             lg:px-24 lg:py-10
             xl:w-1/2 xl:px-32
-            2xl:px-40 2xl:py-12">
+            2xl:px-40">
                 {/* header icon */}
                 <div className="flex items-start">
                     <a href="/">
@@ -43,7 +43,9 @@ export const Header = () => {
                     </a>
                 </div>
                 {/* mission vision button */}
-                <div className="flex my-20 shadow-2xl">
+                <div className="flex shadow-2xl
+                my-10
+                2xl:my-20">
                     {buttonList.map((button, index) => (
                         <button key={index} onClick={() => handleButtonClick(index + 1)} className={buttonClass(index + 1)}>
                             {button}
@@ -76,10 +78,9 @@ export const Header = () => {
             </div>
             {/* WIP */}
             <div className="hidden 
-            xl:w-full xl:h-full xl:block
-            2xl:w-auto 2xl:h-auto
+            xl:w-[50%] xl:h-auto xl:block
             ">
-                <img src={Model} alt="Model" className="h-full" />
+                <img src={Model} alt="Model" className="w-full object-cover" />
             </div>
         </section>
     );
