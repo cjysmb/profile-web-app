@@ -44,6 +44,11 @@ h1 {
 button {
   cursor: pointer;
   transition: border-color 0.25s;
+
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 
 @media (prefers-color-scheme: light) {

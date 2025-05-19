@@ -3,6 +3,17 @@ import { OurPrograms } from "../../data";
 import { defaultTextClass, headerTextClass } from "../../styles/common";
 import Quotation from "../../assets/icons/programs/quote.svg";
 
+export const buttonClass = (activeButton:number, buttonNumber: number, buttonShape: string) => {
+    return `px-4 py-2 font-bold border-[#5B7D7E]
+        text-[12px]
+        md:text-[16px]
+        2xl:text-[20px]
+        ${!buttonShape ? "border-x border-y-2" : "border-2"}
+        ${activeButton === buttonNumber ? "bg-[#5B7D7E] text-white" : "bg-white text-[#5B7D7E]"}
+        ${buttonShape}
+    `;
+};
+
 export const Programs = () => {
 
     const [activeButton, setActiveButton] = useState(1);
@@ -26,16 +37,6 @@ export const Programs = () => {
         }
     ];
 
-    const buttonClass = (buttonNumber: number, buttonShape: string) => {
-        return `px-4 py-2 font-bold border-[#5B7D7E]
-        text-[12px]
-        md:text-[16px]
-        2xl:text-[20px]
-        ${!buttonShape ? "border-x border-y-2" : "border-2"}
-        ${activeButton === buttonNumber ? "bg-[#5B7D7E] text-white" : "bg-white text-[#5B7D7E]"}
-        ${buttonShape}
-        `;
-    };
     const defaultBoldText = "text-[#2D302D] font-bold text-[16px]";
     const defaultText = "text-[#2D302D] font-normal text-pretty text-[16px]";
     const programHeaderText = "text-[#5B7D7E] font-bold text-[18px]";
@@ -60,13 +61,13 @@ export const Programs = () => {
     return (
         <section className="w-full flex flex-col items-center relative
         p-8
-        2xl:px-40 pb-40">
+        2xl:px-40 2xl:pb-40">
             <span className={headerTextClass}>
                 {OurPrograms.title}
             </span>
             <div className="flex shadow-2xl my-[32px]">
                 {buttonProgramList.map((item, index) => (
-                    <button key={index} className={buttonClass(index + 1, item.buttonShape)} onClick={() => handleButtonClick(index + 1)}>
+                    <button key={index} className={buttonClass(activeButton, index + 1, item.buttonShape)} onClick={() => handleButtonClick(index + 1)}>
                         {item.buttonText}
                     </button>
                 ))}
