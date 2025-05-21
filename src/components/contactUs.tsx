@@ -2,8 +2,10 @@ import { useState } from "react";
 import { headerTextClass } from "../styles/common"
 import VectorRight from "../assets/images/contact/VectorRight.svg";
 import VectorLeft from "../assets/images/contact/VectorLeft.svg";
+import emailjs from 'emailjs-com';
 
 export const ContactUs = () => {
+    const env = import.meta.env;
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -19,18 +21,21 @@ export const ContactUs = () => {
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         console.log('Form submitted:', formData);
-        const subject = encodeURIComponent('New Contact Form Submission');
-        const body = encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\nMobile: ${formData.mobile}\n\nMessage:\n${formData.message}`
-        );
-
-        window.location.href = `mailto:christianjaede30@gmail.com?subject=${subject}&body=${body}`;
-         setFormData({
-            name: '',
-            email: '',
-            mobile: '',
-            message: ''
-        });
+          emailjs.send(
+            env.VITE_EMAILJS_SERVICE_ID, 
+            env.VITE_EMAILJS_TEMPLATE_ID,
+            formData,
+            env.VITE_EMAILJS_PUBLIC_KEY 
+            ).then(
+            () => {
+                console.log('✅ Message sent!');
+                setFormData({ name: '', email: '', mobile: '', message: '' });
+            },
+            (err) => {
+                console.error('FAILED...', err);
+                console.error('❌ Failed to send. Try again.');
+            }
+            );
         // Add your submission logic here (e.g., send to API)
     };
 
