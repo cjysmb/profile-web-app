@@ -79,7 +79,7 @@ export const ContactUs = () => {
                 <div className="flex flex-col md:flex-row">
                     {data.map((item, key) => {
                         return (
-                            <div className="p-4 w-full lg:w-[200px]">
+                            <div className="p-4 w-full lg:w-[200px]" key={"input"+key}>
                                 <input placeholder={item.text} type={item.type}
                                     name={item.name} value={item.value}
                                     onChange={(e) => e.target.value.length <= item.maxLength && handleChange(e)}
