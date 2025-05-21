@@ -15,7 +15,9 @@ export const Coaches = () => {
 
     return (
         <div className="relative w-full flex relative
-        p-8
+        px-[12px]
+        py-8
+        md:px-8
         2xl:px-40 2xl:pt-20 2xl:pb-5">
             <HorizontalLine />
             <div className="w-full flex flex-col items-center py-5">

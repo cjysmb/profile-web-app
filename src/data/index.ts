@@ -147,16 +147,6 @@ export const OurCoaches = {
                 "Certified Functional Medicine Health Coach",
                 "Advance Training for Mind-Body Medicine"
             ]
-        },
-        {
-            img: Johannes,
-            name: "Johannes Laue",
-            information: [
-                "B.S Sports Science",
-                "10 years of Personal Fitness Training experience",
-                "Certified Functional Medicine Health Coach",
-                "Advance Training for Mind-Body Medicine"
-            ]
         }
     ]
 }

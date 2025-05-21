@@ -72,7 +72,7 @@ export const ContactUs = () => {
             <div className="absolute bottom-0 left-0 z-0">
                 <img src={VectorLeft} alt="vector left" className="opacity-50" />
             </div>
-            <div className={headerTextClass}>
+            <div className={`relative ${headerTextClass}`}>
                 Contact Us
             </div>
             <div className="w-full md:w-[600px] relative">
