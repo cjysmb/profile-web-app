@@ -8,7 +8,8 @@ import { ContactUs } from "../components/contactUs";
 
 export const HorizontalLine = () => {
     return (
-        <div className="absolute left-1/2 top-0 -translate-x-1/2 transform z-0">
+        <div className="absolute left-1/2 top-0 -translate-x-1/2 transform z-0 hidden
+        md:block">
             <img src={Horizontal} alt="vector" />
         </div>
     )

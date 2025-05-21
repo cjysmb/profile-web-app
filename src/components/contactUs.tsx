@@ -65,7 +65,7 @@ export const ContactUs = () => {
     ]
 
     return (
-        <section className="flex flex-col justify-center items-center w-full py-6 relative">
+        <section className="flex flex-col justify-center items-center w-full py-6 relative bg-white">
             <div className="absolute top-0 right-0 z-0">
                 <img src={VectorRight} alt="vector right" className="opacity-50" />
             </div>
