@@ -30,7 +30,7 @@ export const Coaches = () => {
                             flex-col
                             lg:w-[90%] lg:flex-row
                             xl:w-[70%]
-                            2xl:w-[60%]" key={"coach"+index}>
+                            2xl:w-[920px]" key={"coach"+index}>
                                 <div className="bg-[#fff] rounded-[30px] shadow-2xl relative
                                 w-[345px]">
                                     <img src={coach.img} alt={coach.name} className="w-auto" />

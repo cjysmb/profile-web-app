@@ -64,7 +64,7 @@ export const About = () => {
                                 <div className="
                                 lg:w-[20%]
                                 xl:w-[15%]
-                                2xl:w-[12%]">
+                                2xl:w-[120px]">
                                     <img src={item.icon} alt={"icon"+index} />
                                 </div>
                                 <div className="w-full">
