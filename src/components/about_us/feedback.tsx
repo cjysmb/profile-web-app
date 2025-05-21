@@ -13,8 +13,9 @@ export const Feedback = () => {
         <section className="w-full flex flex-col items-center
         relative
         z-10
-        px-4
+        px-[12px]
         pt-10
+        md:px-4
         xl:px-32
         2xl:px-40 2xl:pt-[100px]
         ">

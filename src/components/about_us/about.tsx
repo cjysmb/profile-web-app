@@ -33,8 +33,9 @@ export const About = () => {
     return (
         <section className="w-full snap-start relative
         flex flex-col items-center 
-        px-4
+        px-[12px]
         py-10
+        md:px-14
         2xl:px-40">
             <span className={headerTextClass}>
                 {AboutUs.title}
@@ -64,7 +65,7 @@ export const About = () => {
                                 <div className="
                                 lg:w-[20%]
                                 xl:w-[15%]
-                                2xl:w-[12%]">
+                                2xl:w-[120px]">
                                     <img src={item.icon} alt={"icon"+index} />
                                 </div>
                                 <div className="w-full">

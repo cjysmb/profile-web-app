@@ -6,8 +6,9 @@ import { HorizontalLine } from "../../views/Home";
 export const AboutUs = () => {
     return (
         <div className="relative w-full min-h-screen bg-[#F5F6FA]
-        px-4
+        px-[12px]
         pb-20
+        md:px-4
         xl:py-20
         2xl:pt-[100px] 2xl:pb-[154px]">
             <HorizontalLine />

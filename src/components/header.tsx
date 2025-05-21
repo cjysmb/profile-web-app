@@ -27,6 +27,7 @@ export const Header = () => {
             snap-start
             flex flex-col
             text-black h-[80%]
+            bg-white
             md:flex-row">
             {/* Left Section */}
             <div className="w-full flex flex-col items-start
