@@ -4,6 +4,7 @@ import { Header } from "../components/header";
 import { OurProgram } from "../components/our_programs/ourProgram";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import Horizontal from "../assets/icons/about/hr.svg";
+import { ContactUs } from "../components/contactUs";
 
 export const HorizontalLine = () => {
     return (
@@ -21,6 +22,7 @@ export const Home = () => {
             <Header />
             <OurProgram />
             <AboutUs />
+            <ContactUs />
             <Footer />
         </div>
     )

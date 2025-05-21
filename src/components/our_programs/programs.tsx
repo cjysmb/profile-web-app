@@ -60,7 +60,9 @@ export const Programs = () => {
 
     return (
         <section className="w-full flex flex-col items-center relative
-        p-8
+        px-[12px]
+        py-8
+        md:px-4
         2xl:px-40 2xl:pb-40">
             <span className={headerTextClass}>
                 {OurPrograms.title}

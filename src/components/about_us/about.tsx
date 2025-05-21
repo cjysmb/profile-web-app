@@ -33,8 +33,9 @@ export const About = () => {
     return (
         <section className="w-full snap-start relative
         flex flex-col items-center 
-        px-4
+        px-[12px]
         py-10
+        md:px-14
         2xl:px-40">
             <span className={headerTextClass}>
                 {AboutUs.title}
