@@ -83,7 +83,7 @@ export const ContactUs = () => {
                                 <input placeholder={item.text} type={item.type}
                                     name={item.name} value={item.value}
                                     onChange={(e) => e.target.value.length <= item.maxLength && handleChange(e)}
-                                    className="bg-white p-[12px] text-italic border border-[#C5CDE0] rounded-[8px] w-full" tabIndex={key=1} />
+                                    className="bg-white p-[12px] text-black text-italic border border-[#C5CDE0] rounded-[8px] w-full" tabIndex={key=1} />
                             </div>  
                         )
                     })}
@@ -96,7 +96,7 @@ export const ContactUs = () => {
                         placeholder="Message"
                         rows={2}
                         maxLength={500}
-                        className="w-full p-[12px] border border-[#C5CDE0] rounded-[8px] bg-white"
+                        className="w-full p-[12px] border border-[#C5CDE0] rounded-[8px] bg-white text-black"
                         value={formData.message}
                         onChange={handleChange}
                         required
