@@ -1,11 +1,10 @@
 import { About } from "./about"
 import { Feedback } from "./feedback";
-import VectorBG  from "../../assets/icons/about/vectorbg.svg";
 import { HorizontalLine } from "../../views/Home";
 
 export const AboutUs = () => {
     return (
-        <div className="relative w-full min-h-screen bg-[#F5F6FA]
+        <div className="relative w-full min-h-screen
         px-[12px]
         pb-20
         md:px-4
@@ -16,15 +15,12 @@ export const AboutUs = () => {
             w-[300px] h-[300px]
             hidden
             md:block
-            2xl:w-[750px] 2xl:h-[800px] 2xl:-mt-80 "/>
+            2xl:w-[750px] 2xl:h-[800px]"/>
             <div className="absolute left-1/2 bottom-1/2 transform -translate-x-1/2  rounded-full bg-gradient-to-b from-[#728C69]/20 to-[#E1EEDA]/20 blur-2xl z-0 
             w-[300px] h-[300px] -mb-150
             hidden
             md:block
             2xl:w-[750px] 2xl:h-[700px] 2xl:-mb-185 "/>
-            <div className="absolute bottom-0 right-0 z-0">
-                <img src={VectorBG} alt="vector" />
-            </div>
             <About />
             <Feedback />
         </div>

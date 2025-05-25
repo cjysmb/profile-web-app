@@ -18,13 +18,16 @@ export const HorizontalLine = () => {
 export const Home = () => {
     return (
         <div className="w-full snap-y snap-mandatory">
-
             <SpeedInsights />
             <Header />
-            <OurProgram />
-            <AboutUs />
-            <ContactUs />
-            <Footer />
+            {/* WIP: mobile backround */}
+            <div className={`bg-[url('/mobileBackground.svg')] sm:bg-[url('/background.svg')] bg-cover z-1 relative`}>
+                <OurProgram />
+                <AboutUs />
+                <ContactUs />
+                <Footer />
+            </div>
+            
         </div>
     )
 }

@@ -61,15 +61,14 @@ export const ContactUs = () => {
             type: "number",
             maxLength: 10
         },
-
     ]
 
     return (
         <section className="flex flex-col justify-center items-center w-full py-6 relative bg-white">
-            <div className="absolute top-0 right-0 z-0">
+            <div className="hidden md:block absolute top-0 right-0 z-0">
                 <img src={VectorRight} alt="vector right" className="opacity-50" />
             </div>
-            <div className="absolute bottom-0 left-0 z-0">
+            <div className="hidden md:block absolute bottom-0 left-0 z-0">
                 <img src={VectorLeft} alt="vector left" className="opacity-50" />
             </div>
             <div className={`relative ${headerTextClass}`}>
@@ -83,7 +82,7 @@ export const ContactUs = () => {
                                 <input placeholder={item.text} type={item.type}
                                     name={item.name} value={item.value}
                                     onChange={(e) => e.target.value.length <= item.maxLength && handleChange(e)}
-                                    className="bg-white p-[12px] text-black text-italic border border-[#C5CDE0] rounded-[8px] w-full" tabIndex={key=1} />
+                                    className="bg-white p-[12px] text-black italic border border-[#C5CDE0] rounded-[8px] w-full" tabIndex={key=1} />
                             </div>  
                         )
                     })}
