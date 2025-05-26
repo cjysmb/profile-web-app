@@ -4,7 +4,7 @@ import Check from "../assets/icons/header/check.png";
 import PcHeader from "../assets/icons/header/model.svg";
 import MobileHeader from "../assets/icons/header/headerBg.svg";
 import { Mission, Vision } from "../data";
-import { headerTextClass } from "../styles/common";
+import { CommonHeader } from "../layout/common";
 
 export const Header = () => {
     const [activeButton, setActiveButton] = useState(1);
@@ -57,7 +57,7 @@ export const Header = () => {
                 {activeButton === 1 ? (
                         // mission content
                         <div className="w-full">
-                            <h2 className={`${headerTextClass}`}>{Mission.title}</h2>
+                            <CommonHeader title={Mission.title} />
                             <ul className="space-y-3 mt-8 list-none">
                             {Mission.items.map((item, index) => (
                                 <li className="flex items-center mt-[16px]" key={"mission" + index}>
@@ -72,7 +72,7 @@ export const Header = () => {
                     ) : (
                         // vision content
                         <div>
-                            <h2 className={headerTextClass}>{Vision.title}</h2>
+                            <CommonHeader title={Vision.title} />
                             <p className={textClass}>{Vision.description}</p>
                         </div>
                     )}

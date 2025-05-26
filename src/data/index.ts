@@ -64,7 +64,7 @@ export const OurPrograms = {
     programs: [
         {
             icon: Stress,
-            title: "Self-Awareness",
+            title: "Stress Management",
             items: [
                 "Learn Mind-Body techniques such as breathing, drawing, and expressive movement for better stress management.",
                 "Share your experience with a coach or the group and inspire growth, connection, and support.",
@@ -81,7 +81,8 @@ export const OurPrograms = {
                 },
                 {
                     name: "Price",
-                    value: 25600
+                    value: 25600,
+                    value2: 7200
                 }
             ]
         },
@@ -104,7 +105,8 @@ export const OurPrograms = {
                 },
                 {
                     name: "Price",
-                    value: 25600
+                    value: 25600,
+                    value2: 7200
                 }
             ]
         },
@@ -127,7 +129,8 @@ export const OurPrograms = {
                 },
                 {
                     name: "Price",
-                    value: 25600
+                    value: 25600,
+                    value2: 7200
                 }
             ]
         },
