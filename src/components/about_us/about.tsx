@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AboutUs } from "../../data";
-import { headerTextClass } from "../../styles/common";
 import { buttonClass } from "../our_programs/programs";
+import { CommonHeader } from "../../layout/common";
 
 export const About = () => {
 
@@ -37,9 +37,7 @@ export const About = () => {
         py-10
         md:px-14
         2xl:px-40">
-            <span className={headerTextClass}>
-                {AboutUs.title}
-            </span>
+            <CommonHeader title={AboutUs.title} />
             <div className="flex shadow-2xl mt-10">
                 {buttonAboutList.map((item, index) => (
                     <button key={index} className={buttonClass(activeButton, index + 1, item.buttonShape)} onClick={() => handleButtonClick(index + 1)}>

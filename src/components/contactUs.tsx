@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { headerTextClass } from "../styles/common"
 import VectorRight from "../assets/images/contact/VectorRight.svg";
 import VectorLeft from "../assets/images/contact/VectorLeft.svg";
 import emailjs from 'emailjs-com';
+import { CommonHeader } from "../layout/common";
 
 export const ContactUs = () => {
     const env = import.meta.env;
@@ -14,7 +14,7 @@ export const ContactUs = () => {
     });
 
 
-    const handleChange = (e: { target: { name: any; value: any; }; }) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
@@ -71,9 +71,7 @@ export const ContactUs = () => {
             <div className="hidden md:block absolute bottom-0 left-0 z-0">
                 <img src={VectorLeft} alt="vector left" className="opacity-50" />
             </div>
-            <div className={`relative ${headerTextClass}`}>
-                Contact Us
-            </div>
+            <CommonHeader title="Contact Us" />
             <div className="w-full md:w-[600px] relative">
                 <div className="flex flex-col md:flex-row">
                     {data.map((item, key) => {
@@ -90,7 +88,6 @@ export const ContactUs = () => {
                 </div>
                 <div className="p-[14px]">
                     <textarea
-                        tabIndex={4}
                         name="message"
                         placeholder="Message"
                         rows={2}

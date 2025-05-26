@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { OurCoaches } from "../../data"
-import { defaultTextClass, headerTextClass } from "../../styles/common"
+import { defaultTextClass } from "../../styles/common"
 import { HorizontalLine } from "../../views/Home"
 import Left from "../../assets/icons/programs/left.svg";
 import Right from "../../assets/icons/programs/right.svg";
+import { CommonHeader } from "../../layout/common";
 
 export const Coaches = () => {
     const [activeCoach, setActiveCoach] = useState(1);
@@ -21,9 +22,7 @@ export const Coaches = () => {
         2xl:px-40 2xl:pt-20 2xl:pb-5">
             <HorizontalLine />
             <div className="w-full flex flex-col items-center py-5">
-                <div className={headerTextClass}>
-                    {coachesLength > 1 ? OurCoaches.title2 : OurCoaches.title}
-                </div>
+                <CommonHeader title={coachesLength > 1 ? OurCoaches.title2 : OurCoaches.title} />
                 <div className="w-full flex flex-col items-center mt-4 lg:mt-10">
                     {OurCoaches.coaches.map((coach, index) => (
                         activeCoach === index + 1 && (
