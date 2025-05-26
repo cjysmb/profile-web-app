@@ -14,7 +14,7 @@ export const Header = () => {
     };
 
     const buttonClass = (buttonNumber: number) => {
-        return `px-4 py-2 border-2 font-bold text-[20px] border-[#5B7D7E]
+        return `px-4 py-2 border-2 font-bold text-[16px] md:text-[20px] border-[#5B7D7E]
         ${activeButton === buttonNumber ? "bg-[#5B7D7E] text-white" : "bg-white text-[#5B7D7E]"}
         ${buttonNumber === 1 ? "rounded-l-[20px]" : "rounded-r-[20px]"}
         `;
@@ -33,9 +33,9 @@ export const Header = () => {
             ">
             {/* Left Section */}
             <div className="w-full flex flex-col items-start relative
-            p-[20px]
-            md:pb-20 md:px-20
-            xl:w-1/2 xl:pl-[120px] xl:pb-10
+            px-[26px] pt-[26px] pb-[40px]
+            md:pb-20 md:pt-[23px] md:px-20
+            xl:w-1/2 xl:pl-[120px] xl:py-10
             ">
                 {/* header icon */}
                 <div className="flex items-start">
@@ -57,7 +57,7 @@ export const Header = () => {
                 {activeButton === 1 ? (
                         // mission content
                         <div className="w-full">
-                            <h2 className={headerTextClass}>{Mission.title}</h2>
+                            <h2 className={`${headerTextClass}`}>{Mission.title}</h2>
                             <ul className="space-y-3 mt-8 list-none">
                             {Mission.items.map((item, index) => (
                                 <li className="flex items-center mt-[16px]" key={"mission" + index}>
@@ -77,14 +77,13 @@ export const Header = () => {
                         </div>
                     )}
 
-                <div className="block lg:hidden absolute top-0 right-0">
-                    <img src={MobileHeader} alt="mobileHeader" />
+                <div className="block xl:hidden absolute top-0 right-0">
+                    <img src={MobileHeader} alt="mobileHeader" className="w-[150px] md:w-[300px]" />
                 </div>
             </div>
-            {/* WIP */}
-            <div className="hidden lg:block
+            <div className="hidden xl:block w-1/2 
             ">
-                <img src={PcHeader} alt="Model" className="w-full h-full object-cover" />
+                <img src={PcHeader} alt="Model" className="object-cover w-full"/>
             </div>
         </section>
     );
