@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AboutUs } from "../../data";
 import { buttonClass } from "../our_programs/programs";
 import { CommonHeader } from "../../layout/common";
+import { HorizontalLine } from "../../views/Home";
 
 export const About = () => {
 
@@ -33,19 +34,20 @@ export const About = () => {
     return (
         <section className="w-full snap-start relative
         flex flex-col items-center 
-        px-[12px]
-        py-10
-        md:px-14
-        2xl:px-40">
+        px-[26px]
+        md:px-20
+        xl:px-[120px]
+        ">
+            <HorizontalLine />
             <CommonHeader title={AboutUs.title} />
-            <div className="flex shadow-2xl mt-10">
+            <div className="flex shadow-2xl mt-[26px] md:mt-[32px]">
                 {buttonAboutList.map((item, index) => (
                     <button key={index} className={buttonClass(activeButton, index + 1, item.buttonShape)} onClick={() => handleButtonClick(index + 1)}>
                         {item.buttonText}
                     </button>
                 ))}
             </div>
-            <div className="flex w-full mt-10
+            <div className="flex w-full mt-[50px] md:mt-[40px]
             flex-col
             md:flex-wrap
             lg:flex-row

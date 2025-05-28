@@ -16,14 +16,13 @@ export const Coaches = () => {
 
     return (
         <div className="relative w-full flex relative
-        px-[12px]
-        py-8
-        md:px-8
-        2xl:px-40 2xl:pt-20 2xl:pb-5">
-            <HorizontalLine />
+        px-[26px]
+        xl:px-[120px]
+        ">
             <div className="w-full flex flex-col items-center py-5">
+                <HorizontalLine />
                 <CommonHeader title={coachesLength > 1 ? OurCoaches.title2 : OurCoaches.title} />
-                <div className="w-full flex flex-col items-center mt-4 lg:mt-10">
+                <div className="w-full flex flex-col items-center md:mt-[27px]">
                     {OurCoaches.coaches.map((coach, index) => (
                         activeCoach === index + 1 && (
                             <div className="flex justify-evenly items-center mt-5
@@ -37,6 +36,8 @@ export const Coaches = () => {
                                     <img src={coach.img} alt={coach.name} className="w-auto" />
                                 </div>
                                 <div className="flex flex-col item-start
+                                w-full
+                                md:w-auto
                                 ml-4 mt-10
                                 lg:ml-0 lg:mt-0">
                                     <div className={coachHeader}>
