@@ -1,10 +1,13 @@
 import { Testimonials } from "../../data";
 import Star from "../../assets/icons/about/star.svg";
 
+// md:ml-[36px] 
 export const Feedback = () => {
-    const titleClass = `ml-[36px] rounded-tl-[48px] rounded-tr-[48px] uppercase text-white font-bold bg-[#A9BDA1]
-    px-[24px] py-[8px]  w-[250px] text-[16px] text-center
-    md:px-[48px] py-[16px] md:w-[300px] md:text-[20px] md:w-[280px]
+    const titleClass = `rounded-tl-[48px] rounded-tr-[48px] uppercase text-white font-bold bg-[#A9BDA1] 
+    py-[16px] px-[48px] text-center
+    text-[14px] md:text-[20px]
+    w-[250px] md:w-[320px]
+    md:ml-[36px]
     `;
     const  nameClass = "text-[#2D302D] text-left font-semibold text-[16px] leading-[20px]";
     const statementClass = "text-[#2D302D] text-left text-pretty w-full italic mt-2 font-normal text-[16px] leading-[20px]";
@@ -13,15 +16,16 @@ export const Feedback = () => {
         <section className="w-full flex flex-col items-center
         relative
         z-10
-        px-[12px]
-        pt-10
-        md:px-4
-        xl:px-32
-        2xl:px-40 2xl:pt-[100px]
+        px-[26px]
+        mt-[50px]
+        md:px-20 md:mt-[100px]
+        xl:px-[120px]
         ">
             <div className="w-full 2xl:w-3/4">
-                <div className={titleClass}>
-                    {Testimonials.title}
+                <div className="w-full flex justify-center lg:justify-start">
+                    <div className={titleClass}>
+                        {Testimonials.title}
+                    </div>
                 </div>
                 <div className="bg-[#fff] rounded-[48px] shadow-2xl
                 p-6

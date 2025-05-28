@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { headerTextClass } from "../styles/common"
 import VectorRight from "../assets/images/contact/VectorRight.svg";
 import VectorLeft from "../assets/images/contact/VectorLeft.svg";
 import emailjs from 'emailjs-com';
+import { CommonHeader } from "../layout/common";
 
 export const ContactUs = () => {
     const env = import.meta.env;
@@ -14,7 +14,7 @@ export const ContactUs = () => {
     });
 
 
-    const handleChange = (e: { target: { name: any; value: any; }; }) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
@@ -61,20 +61,17 @@ export const ContactUs = () => {
             type: "number",
             maxLength: 10
         },
-
     ]
 
     return (
         <section className="flex flex-col justify-center items-center w-full py-6 relative bg-white">
-            <div className="absolute top-0 right-0 z-0">
+            <div className="hidden md:block absolute top-0 right-0 z-0">
                 <img src={VectorRight} alt="vector right" className="opacity-50" />
             </div>
-            <div className="absolute bottom-0 left-0 z-0">
+            <div className="hidden md:block absolute bottom-0 left-0 z-0">
                 <img src={VectorLeft} alt="vector left" className="opacity-50" />
             </div>
-            <div className={`relative ${headerTextClass}`}>
-                Contact Us
-            </div>
+            <CommonHeader title="Contact Us" />
             <div className="w-full md:w-[600px] relative">
                 <div className="flex flex-col md:flex-row">
                     {data.map((item, key) => {
@@ -83,7 +80,7 @@ export const ContactUs = () => {
                                 <input placeholder={item.text} type={item.type}
                                     name={item.name} value={item.value}
                                     onChange={(e) => e.target.value.length <= item.maxLength && handleChange(e)}
-                                    className="bg-white p-[12px] text-black text-italic border border-[#C5CDE0] rounded-[8px] w-full" tabIndex={key=1} />
+                                    className="bg-white p-[12px] text-black italic border border-[#C5CDE0] rounded-[8px] w-full" tabIndex={key=1} />
                             </div>  
                         )
                     })}
@@ -91,7 +88,6 @@ export const ContactUs = () => {
                 </div>
                 <div className="p-[14px]">
                     <textarea
-                        tabIndex={4}
                         name="message"
                         placeholder="Message"
                         rows={2}
