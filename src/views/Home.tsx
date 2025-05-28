@@ -22,7 +22,7 @@ export const Home = () => {
             <SpeedInsights />
             <Header />
             {/* WIP: mobile backround */}
-            <div className={`bg-[url('/mobileBackground.png')] md:bg-[url('/background.svg')]`}>
+            <div className={`bg-[url('/mobileBackground.png')] md:bg-[url('/background.svg')] bg-cover bg-no-repeat bg-center`}>
                 <OurProgram />
                 <AboutUs />
                 <ContactUs />
