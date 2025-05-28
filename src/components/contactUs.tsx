@@ -99,7 +99,7 @@ export const ContactUs = () => {
                     ></textarea>
                 </div>
                 <div className="p-[14px] text-right">
-                    <button className="p-[12px] w-[120px] bg-[#5B7D7E] text-white font-bold rounded-[8px]" onClick={handleSubmit}>
+                    <button className="p-[12px] w-full md:w-[120px] bg-[#5B7D7E] text-white font-bold rounded-[8px]" onClick={handleSubmit}>
                         Send
                     </button>
                 </div>
