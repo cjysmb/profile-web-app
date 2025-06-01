@@ -57,7 +57,7 @@ export const Programs = () => {
         return currency
             .map((part) => {
                 if (part.type === 'currency') return 'PHP ';
-                if (part.type === 'group') return "'";
+                if (part.type === 'group') return ",";
                 return part.value;
             })
             .join('');
@@ -91,7 +91,7 @@ export const Programs = () => {
                             <div key={`program-${index}`} className="flex w-full
                             flex-col items-center
                             lg:flex-row lg:items-start">
-                                <div className="w-[100px]">
+                                <div className="lg:w-[100px]">
                                     <img src={program.icon} alt={program.title} className="w-16 h-16" />
                                 </div>
                                 <div className="w-full">
