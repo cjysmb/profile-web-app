@@ -15,15 +15,18 @@ export const About = () => {
     const buttonAboutList = [
         {
             buttonText: "Coaching",
-            buttonShape: "rounded-l-xl"
+            buttonShape: "rounded-l-[20px]",
+            padding: "px-[8px] py-[6.5px] md:px-[19px] md:py-[16px]"
         },
         {
             buttonText: "Logo",
             buttonShape: "",
+            padding: "px-[12px] py-[6.5px] md:px-[41.5px] md:py-[16px]"
         },
         {
             buttonText: "Teamwork",
-            buttonShape: "rounded-r-xl"
+            buttonShape: "rounded-r-[20px]",
+            padding: "px-[12px] py-[6.5px] md:px-[14.5px] md:py-[16px]"
         }
     ];
 
@@ -40,9 +43,9 @@ export const About = () => {
         ">
             <HorizontalLine />
             <CommonHeader title={AboutUs.title} />
-            <div className="flex shadow-2xl mt-[26px] md:mt-[32px]">
+            <div className="flex shadow-2xl mt-[26px] md:mt-[32px] rounded-[20px]">
                 {buttonAboutList.map((item, index) => (
-                    <button key={index} className={buttonClass(activeButton, index + 1, item.buttonShape)} onClick={() => handleButtonClick(index + 1)}>
+                    <button key={index} className={buttonClass(activeButton, index + 1, item.buttonShape, item.padding)} onClick={() => handleButtonClick(index + 1)}>
                         {item.buttonText}
                     </button>
                 ))}

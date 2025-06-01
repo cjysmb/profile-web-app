@@ -4,13 +4,14 @@ import { defaultTextClass } from "../../styles/common";
 import Quote from "../../assets/icons/programs/quote.svg";
 import { CommonHeader } from "../../layout/common";
 
-export const buttonClass = (activeButton:number, buttonNumber: number, buttonShape: string) => {
-    return `px-4 py-2 font-bold border-[#5B7D7E]
+export const buttonClass = (activeButton:number, buttonNumber: number, buttonShape: string, padding: string) => {
+    return `font-bold border-[#5B7D7E]
         text-[16px]
         2xl:text-[20px]
         ${!buttonShape ? "border-x border-y-2" : "border-2"}
         ${activeButton === buttonNumber ? "bg-[#5B7D7E] text-white" : "bg-white text-[#5B7D7E]"}
         ${buttonShape}
+        ${padding}
     `;
 };
 
@@ -25,15 +26,18 @@ export const Programs = () => {
     const buttonProgramList = [
         {
             buttonText: "Stress Management",
-            buttonShape: "rounded-l-xl"
+            buttonShape: "rounded-l-[20px]",
+            padding: "px-[8px] py-[12px] md:px-[12px] md:py-[16px]"
         },
         {
             buttonText: "Healthy Eating",
             buttonShape: "",
+            padding: "p-[12px] md:px-[12px] md:py-[16px]"
         },
         {
             buttonText: "Joyful Movement",
-            buttonShape: "rounded-r-xl"
+            buttonShape: "rounded-r-[20px]",
+            padding: "p-[12px] md:px-[12px] md:py-[16px]"
         }
     ];
 
@@ -67,9 +71,9 @@ export const Programs = () => {
         xl:px-[120px]
         2xl:pb-40">
             <CommonHeader title={OurPrograms.title} />
-            <div className="flex shadow-2xl mt-[20px] lg:mt-[32px]">
+            <div className="flex shadow-2xl mt-[20px] lg:mt-[32px] rounded-[20px]">
                 {buttonProgramList.map((item, index) => (
-                    <button key={index} className={buttonClass(activeButton, index + 1, item.buttonShape)} onClick={() => handleButtonClick(index + 1)}>
+                    <button key={index} className={buttonClass(activeButton, index + 1, item.buttonShape, item.padding)} onClick={() => handleButtonClick(index + 1)}>
                         {item.buttonText}
                     </button>
                 ))}
@@ -96,8 +100,8 @@ export const Programs = () => {
                                     lg:flex-row lg:items-center">
                                         <div className="mt-4
                                         w-full
-                                        lg:w-[60%]
-                                        xl:w-[70%]">
+                                        xl:w-[60%]
+                                        2xl:w-[70%]">
                                             <div className="text-center lg:text-left">
                                                 <span className={programHeaderText}>
                                                     {program.title}
@@ -118,14 +122,14 @@ export const Programs = () => {
                                         w-full
                                         mt-[16px]
                                         md:mt-[20px]
-                                        lg:w-[40%]
-                                        xl:w-[30%]">
+                                        xl:w-[40%]
+                                        2xl:w-[30%]">
                                             {program.details.map((detail, i) => (
                                                 <div className="flex flex-row w-full" key={`program-detail-${i}`}>
-                                                    <div className={`${programDetailText} ${i === 0 ? "rounded-tl-[16px]" : "rounded-bl-[16px]"} m-[1px]`}>
+                                                    <div className={`${programDetailText} ${i === 0 ? "rounded-tl-[16px]" : "rounded-bl-[16px]"} m-[1px] w-1/3`}>
                                                         {detail.name}
                                                     </div>
-                                                    <div className={`${programValueText} ${i === 0 ? "rounded-tr-[16px]" : "rounded-br-[16px]"} m-[1px]`}>
+                                                    <div className={`${programValueText} ${i === 0 ? "rounded-tr-[16px]" : "rounded-br-[16px]"} m-[1px] w-2/3`}>
                                                         {typeof detail.value === "number" && typeof detail.value2 === "number" ? currencyFormat(detail.value) + " / " + currencyFormat(detail.value2): detail.value}
                                                     </div>
                                                 </div>
@@ -139,8 +143,8 @@ export const Programs = () => {
                                         <div className={`${defaultTextClass} w-full md:w-[70%] mt-2`}>
                                             {program.testimonial.statement}
                                         </div>
-                                        <div className="block absolute right-0 top-0 w-[57px] md:w-auto rounded-tr-[48px]">
-                                            <img src={Quote} alt="quotation" />
+                                        <div className="block absolute right-0 top-0 w-[57px] md:w-auto">
+                                            <img src={Quote} alt="quotation" className="rounded-tr-[11px]" />
                                         </div>
                                     </div>
                                 </div>

@@ -27,9 +27,11 @@ export const Header = () => {
         <section className="
             snap-start
             flex flex-col
-            text-black h-[80%]
+            text-black 
             bg-white
             md:flex-row
+            lg:h-full
+            2xl:h-[80vh]
             ">
             {/* Left Section */}
             <div className="w-full flex flex-col items-start relative
@@ -71,7 +73,7 @@ export const Header = () => {
                         </div>
                     ) : (
                         // vision content
-                        <div>
+                        <div className="w-[90%] md:w-[70%] xl:w-[90%]">
                             <CommonHeader title={Vision.title} />
                             <p className={textClass}>{Vision.description}</p>
                         </div>
@@ -83,7 +85,7 @@ export const Header = () => {
             </div>
             <div className="hidden xl:block w-1/2 
             ">
-                <img src={PcHeader} alt="Model" className="object-cover w-full"/>
+                <img src={PcHeader} alt="Model" className="object-cover w-full h-full"/>
             </div>
         </section>
     );
