@@ -12,6 +12,13 @@ export const ContactUs = () => {
         mobile: '',
         message: ''
     });
+    
+    const [tooltip, setTooltip] = useState<{ message: string; type: "success" | "error" | null }>({
+        message: "",
+        type: null,
+    });
+
+    const [loading, setIsLoading] = useState(false);
 
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -19,6 +26,7 @@ export const ContactUs = () => {
     };
 
     const handleSubmit = (e: { preventDefault: () => void; }) => {
+        setIsLoading(true)
         e.preventDefault();
         console.log('Form submitted:', formData);
           emailjs.send(
@@ -28,16 +36,26 @@ export const ContactUs = () => {
             env.VITE_EMAILJS_PUBLIC_KEY 
             ).then(
             () => {
-                console.log('✅ Message sent!');
+                setTooltip({ message: "✅ Message sent!", type: "success" });
                 setFormData({ name: '', email: '', mobile: '', message: '' });
+                clearTooltip();
+                setIsLoading(false);
             },
             (err) => {
                 console.error('FAILED...', err);
-                console.error('❌ Failed to send. Try again.');
+                setTooltip({ message: '❌ Failed to send. Try again.', type: "error" });
+                clearTooltip();
+                setIsLoading(false);
             }
-            );
+        );
         // Add your submission logic here (e.g., send to API)
     };
+
+    const clearTooltip = () => {
+        setTimeout(() => {
+            setTooltip({ message: "", type: null });
+        }, 3000); // Clear tooltip after 3 seconds
+    }
 
     const data = [
         {   
@@ -80,7 +98,7 @@ export const ContactUs = () => {
                                 <input placeholder={item.text} type={item.type}
                                     name={item.name} value={item.value}
                                     onChange={(e) => e.target.value.length <= item.maxLength && handleChange(e)}
-                                    className="bg-white p-[12px] text-black italic border border-[#C5CDE0] rounded-[8px] w-full" tabIndex={key=1} />
+                                    className="bg-white p-[12px] text-black italic border border-[#C5CDE0] rounded-[8px] w-full" />
                             </div>  
                         )
                     })}
@@ -99,10 +117,39 @@ export const ContactUs = () => {
                     ></textarea>
                 </div>
                 <div className="p-[14px] text-right">
-                    <button className="p-[12px] w-full md:w-[120px] bg-[#5B7D7E] text-white font-bold rounded-[8px]" onClick={handleSubmit}>
-                        Send
+                    <button disabled={loading} className="p-[12px] w-full md:w-[120px] bg-[#5B7D7E] text-white font-bold rounded-[8px]" onClick={handleSubmit}>
+                        {loading ? (
+                            <span>
+                                <svg className="inline w-4 h-4 mr-2 animate-spin" viewBox="0 0 24 24">
+                                <circle
+                                    className="opacity-25"
+                                    cx="12"
+                                    cy="12"
+                                    r="10"
+                                    stroke="currentColor"
+                                    strokeWidth="4"
+                                    fill="none"
+                                />
+                                <path
+                                    className="opacity-75"
+                                    fill="currentColor"
+                                    d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                                />
+                                </svg>
+                            </span>
+                            ) : (
+                            "Send"
+                            )}
                     </button>
                 </div>
+                {tooltip.type && (
+                    <div
+                    className={`absolute  -top-[100px] right-0 mt-2 px-4 py-2 rounded shadow-lg text-white text-sm
+                        ${tooltip.type === "success" ? "bg-green-600" : "bg-red-600"}`}
+                    >
+                    {tooltip.message}
+                    </div>
+                )}
             </div>
         </section>
     )
