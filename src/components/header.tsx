@@ -31,7 +31,7 @@ export const Header = () => {
             bg-white
             md:flex-row
             lg:h-full
-            2xl:h-[80vh]
+            2xl:h-[90vh]
             ">
             {/* Left Section */}
             <div className="w-full flex flex-col items-start relative
@@ -62,8 +62,8 @@ export const Header = () => {
                             <CommonHeader title={Mission.title} />
                             <ul className="space-y-3 mt-8 list-none">
                             {Mission.items.map((item, index) => (
-                                <li className="flex items-center mt-[16px]" key={"mission" + index}>
-                                    <img src={Check} alt="check" className="mr-4" />
+                                <li className="flex items-start mt-[16px]" key={"mission" + index}>
+                                    <img src={Check} alt="check" className="mt-1 mr-4" />
                                     <span className={textClass}>
                                         {item}
                                     </span>

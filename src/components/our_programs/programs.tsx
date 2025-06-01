@@ -109,8 +109,8 @@ export const Programs = () => {
                                             </div>
                                             <ul className="space-y-3 mt-[12px] md:mt-[20px] list-none">
                                                 {program.items.map((list, index) => (
-                                                    <li className="flex items-center" key={`program-list-${index}`}>
-                                                        <div className="mt-1 mr-4 w-2 h-2 bg-[#728C69] rounded-full shrink-0" />
+                                                    <li className="flex items-start" key={`program-list-${index}`}>
+                                                        <div className="mt-2 mr-4 w-2 h-2 bg-[#728C69] rounded-full shrink-0" />
                                                         <span className={defaultTextClass}>
                                                             {list}
                                                         </span>
