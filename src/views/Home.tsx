@@ -3,6 +3,7 @@ import { Footer } from "../components/footer";
 import { Header } from "../components/header";
 import { OurProgram } from "../components/our_programs/ourProgram";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react";
 import Horizontal from "../assets/icons/about/hr.svg";
 import mHorizontal from "../assets/icons/about/mobileHr.svg";
 import { ContactUs } from "../components/contactUs";
@@ -20,8 +21,8 @@ export const Home = () => {
     return (
         <div className="w-full snap-y snap-mandatory">
             <SpeedInsights />
+            <Analytics />
             <Header />
-            {/* WIP: mobile backround */}
             <div className={`bg-[url('/mobileBackground.png')] md:bg-[url('/background.svg')] bg-cover bg-no-repeat bg-center`}>
                 <OurProgram />
                 <AboutUs />
