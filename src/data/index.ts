@@ -3,19 +3,20 @@ import { Fruit, Smile, Stress } from "../assets/icons/programs";
 import Johannes from "../assets/images/coaches/johannes.svg";
 
 export const Mission = {
-    title: "To Support Individuals in",
+    title: "To Support Individuals in achieving better overall health through:",
     items: [
-        "Expanding self-awareness",
-        "Tapping into their strengths",
-        "Identifying core values",
-        "Building confidence",
-        "Experimenting with life-enhancing behaviors that lead to the fulfillment of their personal goals."
+        "Sustainable stress management",
+        "Mindful eating habits",
+        "Improved physical fitness"
     ]
 };
 
 export const Vision = {
     title: "To build Healing Community",
-    description: "where individuals support one another in fostering personal growth, collective well-being, and environmental sustainability."
+    description: `To create a thriving, inclusive community where every individual has the
+                    opportunity, support, and environment to achieve optimal health,
+                    wellbeing and a balanced life - physically, mentally socially, and
+                    environmentally.`
 };
 
 export const AboutUs = {
@@ -25,26 +26,37 @@ export const AboutUs = {
         {
             icon: People,
             icon2: Eclipse,
-            description: "Coaching is a supportive alliance between coach and client.It is built on mutual respect, trust, and shared commitment.",
-            description1: "Both the coach and the client hold each other in positive regard, creating a space where each can grow, learn, and benefit equally from their interactions."
+            description: `Through calming, mindful conversation, coaches support individuals and
+                            groups in exploring and achieving their self-defined health and wellness
+                            goals.`,
+            description1: `Using a client-centered approach, coaches helps people tap into their
+                            own insight, strengths, and resources. Together, they set meaningful
+                            goals, take intentional action, and create accountability—leading to
+                            lasting, healthy lifestyle change.`
         },
         {
             icon: Logo,
             icon2: Eclipse,
-            description: "Our Compassionate Coaches Logo symbolizes this partnership — two people moving in harmony, dancing in the moment, and flowing with the rhythm of each session.",
-            description1: "It represents collaboration, resilience, and the joint effort to overcome challenges and achieve the client’s personal goals."
+            description: `The Compassionate Coaches logo symbolizes the partnership at the heart
+                            of coaching—two individuals moving in harmony, dancing in the moment,
+                            and flowing with the rhythm of each session.`,
+            description1: `The Compassionate Coaches logo represents collaboration, resilience,
+                            and the shared commitment to navigating challenges and achieving the
+                            client’s personal goals.`
         },
         {
             icon: Plant,
             icon2: Eclipse,
-            description: "At Our Compassionate Coaches, we believe in working together, each coach bringing their unique strengths and expertise to support not only the client’s aspirations but also their own professional growth.",
-            description1: "Together, we cultivate a meaningful and impactful coaching journey."
+            description:`At Compassionate Coaches, we believe in the power of working together.
+                            Each coach brings unique strengths and expertise—not only to support
+                            client goals, but also to foster continuous professional growth. `,
+            description1: "Together, we cultivate a meaningful, collaborative, and impactful coaching journey."
         },
     ]
 };
 
 export const Testimonials = {
-    title: "Client's Feedback",
+    title: "Client Feedback",
     clients: [
         {
             name: "Marie, COO",
@@ -71,8 +83,10 @@ export const OurPrograms = {
                 "Individual / Group"
             ],
             testimonial: {
-                name: "Michael Arloski",
-                statement: "“Wellness is the experience of living life with high level of awareness, conscious choice, self-acceptance, interconnectedness, love, meaning and purpose.”"
+                name: "Thich Nhat Hanh",
+                statement: `“If you know how to breathe, how to sit
+                                calmly and quietly, how to do walking meditation, then you have your
+                                seatbelt and you're always safe.”`
             },
             details: [
                 {
@@ -84,7 +98,7 @@ export const OurPrograms = {
                     value: 25600,
                     value2: 7200
                 }
-            ]
+            ],
         },
         {
             icon: Fruit,
@@ -106,7 +120,7 @@ export const OurPrograms = {
                 {
                     name: "Price",
                     value: 25600,
-                    value2: 7200
+                    value2: 0,
                 }
             ]
         },
@@ -119,8 +133,10 @@ export const OurPrograms = {
                 "Train with a coach to move better, get stronger, stay consistent, and enjoy every step of your journey."
             ],
             testimonial: {
-                name: "Michael Arloski",
-                statement: "“Wellness is the experience of living life with high level of awareness, conscious choice, self-acceptance, interconnectedness, love, meaning and purpose.”"
+                name: "Daniel Wolpert",
+                statement: `“The entire purpose of the brain is to produce
+                                movement. Movement is the only way we have of interacting with the
+                                world.”`
             },
             details: [
                 {
@@ -130,7 +146,7 @@ export const OurPrograms = {
                 {
                     name: "Price",
                     value: 25600,
-                    value2: 7200
+                    value2: 0,
                 }
             ]
         },
