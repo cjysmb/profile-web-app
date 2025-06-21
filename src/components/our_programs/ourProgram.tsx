@@ -5,9 +5,9 @@ export const OurProgram = () => {
   return (
     <div className="relative w-full min-h-screen
     py-[50px]
-    lg:py-[100px]">
-      <Programs />
+    lg:pt-[63px] lg:pb-[100px]">
       <Coaches />
+      <Programs />
     </div>
   );
 }

@@ -59,7 +59,9 @@ export const Header = () => {
                 {activeButton === 1 ? (
                         // mission content
                         <div className="w-full">
-                            <CommonHeader title={Mission.title} />
+                            <div className='md:w-[400px] lg:w-[500px] xl:w-full'>
+                                <CommonHeader title={Mission.title} />
+                            </div>
                             <ul className="space-y-3 mt-8 list-none">
                             {Mission.items.map((item, index) => (
                                 <li className="flex items-start mt-[16px]" key={"mission" + index}>

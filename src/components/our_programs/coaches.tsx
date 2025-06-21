@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { OurCoaches } from "../../data"
 import { defaultTextClass } from "../../styles/common"
-import { HorizontalLine } from "../../views/Home"
 import Left from "../../assets/icons/programs/left.svg";
 import Right from "../../assets/icons/programs/right.svg";
 import { CommonHeader } from "../../layout/common";
@@ -18,9 +17,9 @@ export const Coaches = () => {
         <div className="relative w-full flex relative
         px-[26px]
         xl:px-[120px]
+        2xl:pb-40
         ">
             <div className="w-full flex flex-col items-center py-5">
-                <HorizontalLine />
                 <CommonHeader title={coachesLength > 1 ? OurCoaches.title2 : OurCoaches.title} />
                 <div className="w-full flex flex-col items-center md:mt-[27px]">
                     {OurCoaches.coaches.map((coach, index) => (
@@ -31,9 +30,8 @@ export const Coaches = () => {
                             lg:w-[90%] lg:flex-row
                             xl:w-[70%]
                             2xl:w-[920px]" key={"coach"+index}>
-                                <div className="bg-[#fff] rounded-[30px] shadow-2xl relative
-                                w-[345px]">
-                                    <img src={coach.img} alt={coach.name} className="w-auto" />
+                                <div className="bg-[#fff] rounded-full shadow-2xl relative w-[200px] h-[200px]">
+                                    <img src={coach.img} alt={coach.name} className="rounded-full shadow-2xl relative w-[200px] h-[200px]" />
                                 </div>
                                 <div className="flex flex-col item-start
                                 w-full

@@ -3,6 +3,8 @@ import { OurPrograms } from "../../data";
 import { defaultTextClass } from "../../styles/common";
 import Quote from "../../assets/icons/programs/quote.svg";
 import { CommonHeader } from "../../layout/common";
+import { HorizontalLine } from "../../views/Home";
+import { DetailsProps, ProgramProps } from "./types";
 
 export const buttonClass = (activeButton:number, buttonNumber: number, buttonShape: string, padding: string) => {
     return `font-bold border-[#5B7D7E]
@@ -63,13 +65,18 @@ export const Programs = () => {
             .join('');
     }
 
+    const isDetailValueNumber = (value: unknown ): boolean => {
+        return typeof value === "number";
+    }
+
     return (
         <section className="w-full flex flex-col items-center relative
         px-[26px]
         py-8
         md:px-20
         xl:px-[120px]
-        2xl:pb-40">
+        ">
+            <HorizontalLine />
             <CommonHeader title={OurPrograms.title} />
             <div className="flex shadow-2xl mt-[20px] lg:mt-[32px] rounded-[20px]">
                 {buttonProgramList.map((item, index) => (
@@ -85,7 +92,7 @@ export const Programs = () => {
                 md:px-[48px] md:py-[32px]
                 border-[#5B7D7E]
                 ">
-                {OurPrograms.programs.map((program, index) => {
+                {OurPrograms.programs.map((program:ProgramProps, index:number) => {
                     return (
                         index + 1 === activeButton && (
                             <div key={`program-${index}`} className="flex w-full
@@ -108,7 +115,7 @@ export const Programs = () => {
                                                 </span>
                                             </div>
                                             <ul className="space-y-3 mt-[12px] md:mt-[20px] list-none">
-                                                {program.items.map((list, index) => (
+                                                {program.items.map((list: string, index: number) => (
                                                     <li className="flex items-start" key={`program-list-${index}`}>
                                                         <div className="mt-2 mr-4 w-2 h-2 bg-[#728C69] rounded-full shrink-0" />
                                                         <span className={defaultTextClass}>
@@ -124,13 +131,15 @@ export const Programs = () => {
                                         md:mt-[20px]
                                         xl:w-[40%]
                                         2xl:w-[30%]">
-                                            {program.details.map((detail, i) => (
+                                            {program.details.map((detail: DetailsProps, i: number) => (
                                                 <div className="flex flex-row w-full" key={`program-detail-${i}`}>
                                                     <div className={`${programDetailText} ${i === 0 ? "rounded-tl-[16px]" : "rounded-bl-[16px]"} m-[1px] w-1/3`}>
                                                         {detail.name}
                                                     </div>
                                                     <div className={`${programValueText} ${i === 0 ? "rounded-tr-[16px]" : "rounded-br-[16px]"} m-[1px] w-2/3`}>
-                                                        {typeof detail.value === "number" && typeof detail.value2 === "number" ? currencyFormat(detail.value) + " / " + currencyFormat(detail.value2): detail.value}
+                                                        {isDetailValueNumber(detail.value) && !detail.value2 ? currencyFormat(detail.value as number) 
+                                                        : isDetailValueNumber(detail.value) && isDetailValueNumber(detail.value2) ? currencyFormat(detail.value as number) + " / " + currencyFormat(detail.value2 as number)
+                                                        : detail.value}
                                                     </div>
                                                 </div>
                                             ))}

@@ -3,6 +3,7 @@ import { AboutUs } from "../../data";
 import { buttonClass } from "../our_programs/programs";
 import { CommonHeader } from "../../layout/common";
 import { HorizontalLine } from "../../views/Home";
+import { AboutUsPros } from "./types";
 
 export const About = () => {
 
@@ -55,7 +56,7 @@ export const About = () => {
             md:flex-wrap
             lg:flex-row
             2xl:flex-wrap">
-            {AboutUs.items.map((item, index) => {
+            {AboutUs.items.map((item: AboutUsPros, index: number) => {
                 return (
                     index + 1 === activeButton && (
                         <div key={index} className={`${cardDefaultClass} 

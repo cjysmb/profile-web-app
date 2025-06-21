@@ -25,6 +25,8 @@ export const ContactUs = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    const buttonDisabled = formData.name === '' || formData.mobile === '';
+
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         setIsLoading(true)
         e.preventDefault();
@@ -117,7 +119,7 @@ export const ContactUs = () => {
                     ></textarea>
                 </div>
                 <div className="p-[14px] text-right">
-                    <button disabled={loading} className="p-[12px] w-full md:w-[120px] bg-[#5B7D7E] text-white font-bold rounded-[8px]" onClick={handleSubmit}>
+                    <button disabled={loading || buttonDisabled} className="p-[12px] w-full md:w-[120px] bg-[#5B7D7E] text-white font-bold rounded-[8px] disabled:opacity-50" onClick={handleSubmit}>
                         {loading ? (
                             <span>
                                 <svg className="inline w-4 h-4 mr-2 animate-spin" viewBox="0 0 24 24">

@@ -1,5 +1,6 @@
 import { Testimonials } from "../../data";
 import Star from "../../assets/icons/about/star.svg";
+import { FeedbackProps } from "./types";
 
 // md:ml-[36px] 
 export const Feedback = () => {
@@ -34,7 +35,7 @@ export const Feedback = () => {
                 2xl:px-24
                 "
                 >
-                    {Testimonials.clients.map((client, index) => (
+                    {Testimonials.clients.map((client: FeedbackProps, index: number) => (
                         index <= 4 && (
                             <div key={index} className="flex space-between my-4 border border-[#CBCFCB] rounded-[11px]
                                 flex-col-reverse
