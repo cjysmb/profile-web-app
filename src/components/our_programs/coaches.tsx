@@ -30,8 +30,8 @@ export const Coaches = () => {
                             lg:w-[90%] lg:flex-row
                             xl:w-[70%]
                             2xl:w-[920px]" key={"coach"+index}>
-                                <div className="bg-[#fff] rounded-full shadow-2xl relative w-[200px] h-[200px]">
-                                    <img src={coach.img} alt={coach.name} className="rounded-full shadow-2xl relative w-[200px] h-[200px]" />
+                                <div className="bg-[#fff] rounded-full relative w-[200px] h-[200px]">
+                                    <img src={coach.img} alt={coach.name} className="rounded-full relative w-[200px] h-[200px]" />
                                 </div>
                                 <div className="flex flex-col item-start
                                 w-full
