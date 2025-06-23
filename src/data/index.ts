@@ -1,5 +1,6 @@
 import { Logo, People, Plant, Eclipse } from "../assets/icons/about";
 import { Fruit, Smile, Stress } from "../assets/icons/programs";
+import { Pin, Phone } from "../assets/icons/footer";
 import Johannes from "../assets/images/coaches/johannes.svg";
 
 export const Mission = {
@@ -169,3 +170,16 @@ export const OurCoaches = {
         }
     ]
 }
+
+export const FooterInfo = [
+    {
+        icon: Pin,
+        type: "location",
+        title: "4th floor, Dusit Thani Hotel, Makati City, Philippines"
+    },
+    {
+        icon: Phone,
+        type: "phone",
+        title: "+63917 526 7661 / (02) 5310 4990"
+    }
+]
