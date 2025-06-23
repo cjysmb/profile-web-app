@@ -10,6 +10,7 @@ export const ContactUs = () => {
         name: '',
         email: '',
         mobile: '',
+        service: '',
         message: ''
     });
     
@@ -39,7 +40,7 @@ export const ContactUs = () => {
             ).then(
             () => {
                 setTooltip({ message: "✅ Message sent!", type: "success" });
-                setFormData({ name: '', email: '', mobile: '', message: '' });
+                setFormData({ name: '', email: '', mobile: '', message: '', service: '' });
                 clearTooltip();
                 setIsLoading(false);
             },
@@ -60,31 +61,39 @@ export const ContactUs = () => {
     }
 
     const data = [
-        {   
+        {
             text: "Name",
             name: 'name',
             value: formData.name,
             type: "text",
             maxLength: 64
         },
-        {   
+        {
             text: "Email",
             name: 'email',
             value: formData.email,
             type: "text",
             maxLength: 32
         },
-        {   
+        {
             text: "+63",
             name: 'mobile',
             value: formData.mobile,
             type: "number",
             maxLength: 10
         },
+        {
+            text: "Service Type",
+            name: "service",
+            value: formData.service,
+            type: "select",
+            maxLength: 32
+
+        }
     ]
 
     return (
-        <section className="flex flex-col justify-center items-center w-full py-6 relative bg-white">
+        <section className="flex flex-col justify-center items-center w-full py-6 relative bg-white px-4 pb-[36px] md:px-0">
             <div className="hidden md:block absolute top-0 right-0 z-0">
                 <img src={VectorRight} alt="vector right" className="opacity-50" />
             </div>
@@ -93,7 +102,7 @@ export const ContactUs = () => {
             </div>
             <CommonHeader title="Contact Us" />
             <div className="w-full md:w-[600px] relative">
-                <div className="flex flex-col md:flex-row">
+                {/* <div className="flex flex-col md:flex-row">
                     {data.map((item, key) => {
                         return (
                             <div className="p-4 w-full lg:w-[200px]" key={"input"+key}>
@@ -105,8 +114,22 @@ export const ContactUs = () => {
                         )
                     })}
                     
+                </div> */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {data.map((item, key) => (
+                        <div className="w-full" key={"input" + key}>
+                            <input
+                                placeholder={item.text}
+                                type={item.type}
+                                name={item.name}
+                                value={item.value}
+                                onChange={(e) => e.target.value.length <= item.maxLength && handleChange(e)}
+                                className="bg-white p-[12px] text-black italic border border-[#C5CDE0] rounded-[8px] w-full"
+                            />
+                        </div>
+                    ))}
                 </div>
-                <div className="p-[14px]">
+                <div className="pt-[14px]">
                     <textarea
                         name="message"
                         placeholder="Message"
@@ -118,7 +141,7 @@ export const ContactUs = () => {
                         required
                     ></textarea>
                 </div>
-                <div className="p-[14px] text-right">
+                <div className="pt-[14px] text-right">
                     <button disabled={loading || buttonDisabled} className="p-[12px] w-full md:w-[120px] bg-[#5B7D7E] text-white font-bold rounded-[8px] disabled:opacity-50" onClick={handleSubmit}>
                         {loading ? (
                             <span>
