@@ -20,7 +20,7 @@ export const Header = () => {
         `;
     }
 
-    const textClass = "text[#2D302D] font-normal w-full text-[16px] sm:text-[18px] md:text-[20px]";
+    const textClass = "text-[#2D302D] font-normal w-full text-[16px] md:text-[20px]";
     const buttonList = ['Mission', 'Vision'];
 
     return (
@@ -35,7 +35,7 @@ export const Header = () => {
             ">
             {/* Left Section */}
             <div className="w-full flex flex-col items-start relative
-            px-[26px] pt-[26px] pb-[40px]
+            px-[26px] pt-[26px] pb-[90px]
             md:pb-20 md:pt-[23px] md:px-20
             xl:w-1/2 xl:pl-[120px] xl:py-10
             ">
@@ -47,8 +47,8 @@ export const Header = () => {
                 </div>
                 {/* mission vision button */}
                 <div className="flex shadow-2xl
-                mt-[32px]
-                md:mt-[71px]">
+                mt-[74px]
+                md:mt-[120px]">
                     {buttonList.map((button, index) => (
                         <button key={index} onClick={() => handleButtonClick(index + 1)} className={buttonClass(index + 1)}>
                             {button}
@@ -59,8 +59,8 @@ export const Header = () => {
                 {activeButton === 1 ? (
                         // mission content
                         <div className="w-full">
-                            <div className='md:w-[400px] lg:w-[500px] xl:w-full'>
-                                <CommonHeader title={Mission.title} />
+                            <div className='w-[300px] md:w-[400px] lg:w-[500px] xl:w-full'>
+                                <CommonHeader title={Mission.title} textSize="text-[16px] md:text-[24px] lg:text-[32px] "/>
                             </div>
                             <ul className="space-y-3 mt-8 list-none">
                             {Mission.items.map((item, index) => (
@@ -75,8 +75,7 @@ export const Header = () => {
                         </div>
                     ) : (
                         // vision content
-                        <div className="w-[90%] md:w-[70%] xl:w-[90%]">
-                            <CommonHeader title={Vision.title} />
+                        <div className="w-[90%] md:w-[70%] xl:w-[90%] mt-[40px]">
                             <p className={textClass}>{Vision.description}</p>
                         </div>
                     )}

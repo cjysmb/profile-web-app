@@ -3,7 +3,7 @@ import { Fruit, Smile, Stress } from "../assets/icons/programs";
 import Johannes from "../assets/images/coaches/johannes.svg";
 
 export const Mission = {
-    title: "To Support Individuals in achieving better overall health through:",
+    title: "To support individuals in achieving better overall health through:",
     items: [
         "Sustainable stress management",
         "Mindful eating habits",
