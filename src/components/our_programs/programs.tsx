@@ -45,8 +45,8 @@ export const Programs = () => {
 
     const defaultBoldText = "text-[#2D302D] font-bold text-[16px]";
     const programHeaderText = "text-[#5B7D7E] font-bold text-[18px]";
-    const programDetailText = `${defaultBoldText} bg-[#EAF8F8] w-1/2 p-[12px]`;
-    const programValueText = `${defaultTextClass} bg-[#E6ECE3] w-1/2 p-[12px]`;
+    const programDetailText = "bg-[#EAF8F8] w-1/2 p-[12px]";
+    const programValueText = "bg-[#E6ECE3] w-1/2 p-[12px]";
 
     const currencyFormat = (value: number) => {
         const currency = Intl.NumberFormat('en-US', {
@@ -133,10 +133,10 @@ export const Programs = () => {
                                         2xl:w-[30%]">
                                             {program.details.map((detail: DetailsProps, i: number) => (
                                                 <div className="flex flex-row w-full" key={`program-detail-${i}`}>
-                                                    <div className={`${programDetailText} ${i === 0 ? "rounded-tl-[16px]" : "rounded-bl-[16px]"} m-[1px] w-1/3`}>
+                                                    <div className={`${defaultTextClass} ${i === 0 ? `rounded-tl-[16px] ${programDetailText}` : `rounded-bl-[16px] ${programValueText}`} w-1/3`}>
                                                         {detail.name}
                                                     </div>
-                                                    <div className={`${programValueText} ${i === 0 ? "rounded-tr-[16px]" : "rounded-br-[16px]"} m-[1px] w-2/3`}>
+                                                    <div className={`${defaultBoldText} text-right ${i === 0 ? `rounded-tr-[16px] ${programDetailText}` : `rounded-br-[16px] ${programValueText}`} w-2/3`}>
                                                         {isDetailValueNumber(detail.value) && !detail.value2 ? currencyFormat(detail.value as number) 
                                                         : isDetailValueNumber(detail.value) && isDetailValueNumber(detail.value2) ? currencyFormat(detail.value as number) + " / " + currencyFormat(detail.value2 as number)
                                                         : detail.value}

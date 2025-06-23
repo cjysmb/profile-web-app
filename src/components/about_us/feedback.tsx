@@ -1,5 +1,4 @@
 import { Testimonials } from "../../data";
-import Star from "../../assets/icons/about/star.svg";
 import { FeedbackProps } from "./types";
 
 // md:ml-[36px] 
@@ -50,7 +49,7 @@ export const Feedback = () => {
                                         {client.statement}
                                     </div>
                                 </div>
-                                <div className="flex
+                                {/* <div className="flex
                                 items-start mb-4 w-full
                                 lg:justify-center lg:items-center lg:w-1/4">
                                     {[...Array(client.star)].map((_, i) => (
@@ -58,7 +57,7 @@ export const Feedback = () => {
                                             <img src={Star} alt="star" className="w-6 h-6" />
                                         </span>
                                     ))}
-                                </div>
+                                </div> */}
                             </div>
                         )
                     ))}

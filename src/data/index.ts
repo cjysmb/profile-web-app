@@ -104,7 +104,7 @@ export const OurPrograms = {
             icon: Fruit,
             title: "Healthy Eating",
             items: [
-                "Explore your eating habits through mindful conversation with a coach.",
+                "Explore your eating habits through a mindful conversation with a coach.",
                 "Connect with your deeper motivation for eating well.",
                 "Build lasting healthy eating habits for long-term success and well-being."
             ],
