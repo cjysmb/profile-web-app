@@ -10,7 +10,6 @@ export const ContactUs = () => {
         name: '',
         email: '',
         mobile: '',
-        service: '',
         message: ''
     });
     
@@ -40,7 +39,7 @@ export const ContactUs = () => {
             ).then(
             () => {
                 setTooltip({ message: "✅ Message sent!", type: "success" });
-                setFormData({ name: '', email: '', mobile: '', message: '', service: '' });
+                setFormData({ name: '', email: '', mobile: '', message: '' });
                 clearTooltip();
                 setIsLoading(false);
             },
@@ -81,14 +80,6 @@ export const ContactUs = () => {
             value: formData.mobile,
             type: "number",
             maxLength: 10
-        },
-        {
-            text: "Service Type",
-            name: "service",
-            value: formData.service,
-            type: "select",
-            maxLength: 32
-
         }
     ]
 
@@ -102,7 +93,7 @@ export const ContactUs = () => {
             </div>
             <CommonHeader title="Contact Us" />
             <div className="w-full md:w-[600px] relative">
-                {/* <div className="flex flex-col md:flex-row">
+                <div className="flex flex-col md:flex-row">
                     {data.map((item, key) => {
                         return (
                             <div className="p-4 w-full lg:w-[200px]" key={"input"+key}>
@@ -114,8 +105,8 @@ export const ContactUs = () => {
                         )
                     })}
                     
-                </div> */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                </div>
+                {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {data.map((item, key) => (
                         <div className="w-full" key={"input" + key}>
                             <input
@@ -128,8 +119,8 @@ export const ContactUs = () => {
                             />
                         </div>
                     ))}
-                </div>
-                <div className="pt-[14px]">
+                </div> */}
+                <div className="p-[14px]">
                     <textarea
                         name="message"
                         placeholder="Message"
@@ -141,7 +132,7 @@ export const ContactUs = () => {
                         required
                     ></textarea>
                 </div>
-                <div className="pt-[14px] text-right">
+                <div className="p-[14px] text-right">
                     <button disabled={loading || buttonDisabled} className="p-[12px] w-full md:w-[120px] bg-[#5B7D7E] text-white font-bold rounded-[8px] disabled:opacity-50" onClick={handleSubmit}>
                         {loading ? (
                             <span>
