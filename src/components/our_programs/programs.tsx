@@ -45,8 +45,6 @@ export const Programs = () => {
 
     const defaultBoldText = "text-[#2D302D] font-bold text-[16px]";
     const programHeaderText = "text-[#5B7D7E] font-bold text-[18px]";
-    const programDetailText = "bg-[#EAF8F8] w-1/2 p-[12px]";
-    const programValueText = "bg-[#E6ECE3] w-1/2 p-[12px]";
 
     const currencyFormat = (value: number) => {
         const currency = Intl.NumberFormat('en-US', {
@@ -132,11 +130,13 @@ export const Programs = () => {
                                         xl:w-[40%]
                                         2xl:w-[30%]">
                                             {program.details.map((detail: DetailsProps, i: number) => (
-                                                <div className="flex flex-row w-full" key={`program-detail-${i}`}>
-                                                    <div className={`${defaultTextClass} ${i === 0 ? `rounded-tl-[16px] ${programDetailText}` : `rounded-bl-[16px] ${programValueText}`} w-1/3`}>
+                                                <div className={`flex flex-col sm:flex-row 
+                                                    ${i === 0 ? 'bg-[#EAF8F8] rounded-tl-[16px] rounded-tr-[16px]' 
+                                                    : 'bg-[#E6ECE3] rounded-bl-[16px] rounded-br-[16px]'}`} key={`program-detail-${i}`}>
+                                                    <div className={`${defaultTextClass} p-[12px] pb-0 sm:p-[12px] w-1/3`}>
                                                         {detail.name}
                                                     </div>
-                                                    <div className={`${defaultBoldText} text-right ${i === 0 ? `rounded-tr-[16px] ${programDetailText}` : `rounded-br-[16px] ${programValueText}`} w-2/3`}>
+                                                    <div className={`${defaultBoldText} px-[12px] pb-[12px] pt-0 sm:p-[12px] text-right w-full md:w-2/3`}>
                                                         {isDetailValueNumber(detail.value) && !detail.value2 ? currencyFormat(detail.value as number) 
                                                         : isDetailValueNumber(detail.value) && isDetailValueNumber(detail.value2) ? currencyFormat(detail.value as number) + " / " + currencyFormat(detail.value2 as number)
                                                         : detail.value}
