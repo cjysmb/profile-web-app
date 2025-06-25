@@ -61,7 +61,7 @@ export const Testimonials = {
     clients: [
         {
             name: "Marie, COO",
-            statement: "Coach Johannes has helped me to be on track of my goals to having a healthy lifestyle, not only for myself, but for my family as well.",
+            statement: "“Coach Johannes has helped me to be on track of my goals to having a healthy lifestyle, not only for myself, but for my family as well.”",
             star: 5
         },
         {
