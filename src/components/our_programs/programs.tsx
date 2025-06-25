@@ -136,7 +136,7 @@ export const Programs = () => {
                                                     <div className={`${defaultTextClass} p-[12px] pb-0 sm:p-[12px] w-1/3`}>
                                                         {detail.name}
                                                     </div>
-                                                    <div className={`${defaultBoldText} px-[12px] pb-[12px] pt-0 sm:p-[12px] text-right w-full md:w-2/3`}>
+                                                    <div className={`${defaultTextClass} px-[12px] pb-[12px] pt-0 sm:p-[12px] text-right w-full md:w-2/3`}>
                                                         {isDetailValueNumber(detail.value) && !detail.value2 ? currencyFormat(detail.value as number) 
                                                         : isDetailValueNumber(detail.value) && isDetailValueNumber(detail.value2) ? currencyFormat(detail.value as number) + " / " + currencyFormat(detail.value2 as number)
                                                         : detail.value}
