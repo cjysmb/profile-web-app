@@ -30,7 +30,7 @@ export const AboutUs = {
             description: `Through calming, mindful conversation, coaches support individuals and
                             groups in exploring and achieving their self-defined health and wellness
                             goals.`,
-            description1: `Using a client-centered approach, coaches helps people tap into their
+            description1: `Using a client-centered approach, coaches help people tap into their
                             own insight, strengths, and resources. Together, they set meaningful
                             goals, take intentional action, and create accountability—leading to
                             lasting, healthy lifestyle change.`
@@ -180,6 +180,6 @@ export const FooterInfo = [
     {
         icon: Phone,
         type: "phone",
-        title: "+63917 526 7661 / (02) 5310 4990"
+        title: "+63917 154 9039 / (02) 5310 4990"
     }
 ]
