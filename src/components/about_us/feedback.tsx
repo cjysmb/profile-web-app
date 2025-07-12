@@ -41,7 +41,7 @@ export const Feedback = () => {
                                 items-start
                                 p-5
                                 lg:flex-row lg:items-center lg:px-10 lg:py-8">
-                                <div className="w-full lg:w-3/4">
+                                <div className="w-full">
                                     <div className={nameClass}>
                                         {client.name}
                                     </div>
