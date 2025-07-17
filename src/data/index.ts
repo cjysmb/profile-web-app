@@ -175,7 +175,7 @@ export const FooterInfo = [
     {
         icon: Pin,
         type: "location",
-        title: "4th floor, Dusit Thani Hotel, Makati City, Philippines"
+        title: "4th Floor, Dusit Thani Manila, Makati City, Philippines"
     },
     {
         icon: Phone,
