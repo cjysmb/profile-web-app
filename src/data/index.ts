@@ -7,8 +7,8 @@ export const Mission = {
     title: "To support individuals in achieving better overall health through:",
     items: [
         "Sustainable stress management",
-        "Mindful eating habits",
-        "Improved physical fitness"
+        "Improved physical fitness",
+        "Mindful eating habits"
     ]
 };
 
@@ -72,6 +72,7 @@ export const Testimonials = {
     ]
 };
 
+
 export const OurPrograms = {
     title: "Our Programs",
     programs: [
@@ -79,9 +80,20 @@ export const OurPrograms = {
             icon: Stress,
             title: "Stress Management",
             items: [
-                "Learn Mind-Body techniques such as breathing, drawing, and expressive movement for better stress management.",
-                "Share your experience with a coach or the group and inspire growth, connection, and support.",
-                "Individual / Group"
+               {
+                mainItem:  "Learn and experience a different type of Mind-Body technique in each session:",
+                subItem: [
+                    "Breathing",
+                    "Drawing",
+                    "Autogenic training",
+                    "Guided imagery",
+                    "Shaking and dancing",
+                ]
+               },
+               {
+                mainItem: "Share your experience with a coach or the group to promote growth, connection, and support.",
+                subItem: []
+               }
             ],
             testimonial: {
                 name: "Thich Nhat Hanh",
@@ -91,47 +103,37 @@ export const OurPrograms = {
             },
             details: [
                 {
-                    name: "Duration",
-                    value: "8 weeks, once a week"
+                    name: "Price per session",
+                    value: 3200,
                 },
                 {
-                    name: "Price",
-                    value: 25600,
-                    value2: 7200
-                }
-            ],
-        },
-        {
-            icon: Fruit,
-            title: "Healthy Eating",
-            items: [
-                "Explore your eating habits through a mindful conversation with a coach.",
-                "Connect with your deeper motivation for eating well.",
-                "Build lasting healthy eating habits for long-term success and well-being."
-            ],
-            testimonial: {
-                name: "Michael Arloski",
-                statement: "“Wellness is the experience of living life with high level of awareness, conscious choice, self-acceptance, interconnectedness, love, meaning and purpose.”"
-            },
-            details: [
-                {
-                    name: "Duration",
-                    value: "8 weeks, once a week"
+                    name: "5 session package",
+                    value: 15000
                 },
                 {
-                    name: "Price",
-                    value: 25600,
-                    value2: 0,
+                    name: "Group of 10",
+                    value: "PHP 500/person"
                 }
-            ]
+            ],
         },
         {
             icon: Smile,
-            title: "Joyful Movement",
-            items: [
-                "Work with a coach to set achievable, personalized goals.",
-                "Enhance your movement experience by learning mindful breathing techniques.",
-                "Train with a coach to move better, get stronger, stay consistent, and enjoy every step of your journey."
+            title: "Fitness Coaching",
+            items:[
+               {
+                mainItem:  "Work with a coach to set achievable, personalized goals.",
+                subItem: []
+               },
+               {
+                mainItem: "Learn and experience a different type of exercise in each session:",
+                subItem: [
+                    "Mobility and Flexibility",
+                    "Core and Balance Training",
+                    "Bodyweight Exercises",
+                    "Strength Training",
+                    "Cardio Exercises"
+                ]
+               }
             ],
             testimonial: {
                 name: "Daniel Wolpert",
@@ -141,16 +143,48 @@ export const OurPrograms = {
             },
             details: [
                 {
-                    name: "Duration",
-                    value: "8 weeks, once a week"
+                    name: "Price per session",
+                    value: 3200,
                 },
                 {
-                    name: "Price",
-                    value: 25600,
-                    value2: 0,
+                    name: "5 session package",
+                    value: 15000
                 }
             ]
         },
+        {
+            icon: Fruit,
+            title: "Healthy Eating",
+            items: [
+                {
+                    mainItem: "Explore your eating habits through a mindful conversation with a coach.",
+                    subItem: [],
+                },
+                {
+                    mainItem: "Connect with your deeper motivation for eating well.",
+                    subItem: []
+                },
+                {
+                    mainItem: "Build lasting healthy eating habits for long-term success and well-being.",
+                    subItem: []
+                }
+                
+            ],
+            testimonial: {
+                name: "Michael Arloski",
+                statement: "“Wellness is the experience of living life with high level of awareness, conscious choice, self-acceptance, interconnectedness, love, meaning and purpose.”"
+            },
+            details: [
+                {
+                    name: "Price per session",
+                    value: 3200,
+                },
+                {
+                    name: "5 session package",
+                    value: 15000
+                }
+            ]
+        }
     ]
 };
 
