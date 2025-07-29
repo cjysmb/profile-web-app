@@ -157,7 +157,7 @@ export const OurPrograms = {
             title: "Healthy Eating",
             items: [
                 {
-                    mainItem: "Explore your eating habits through a mindful conversation with a coach.",
+                    mainItem: "Explore your eating habits through journaling and a mindful conversation with a coach.",
                     subItem: [],
                 },
                 {

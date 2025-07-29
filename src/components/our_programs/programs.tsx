@@ -152,11 +152,11 @@ export const Programs = () => {
                                         rounded-[16px]
                                         border border-[#EAF8F8] bg-[#EAF8F8] p-[12px]">
                                             {program.details.map((detail: DetailsProps, i: number) => (
-                                                <div className='flex flex-col sm:flex-row' key={`program-detail-${i}`}>
-                                                    <div className={`${defaultTextClass} py-[4px] w-1/3`}>
+                                                <div className='flex flex-row' key={`program-detail-${i}`}>
+                                                    <div className={`${defaultTextClass} py-[4px] w-1/2`}>
                                                         {detail.name}
                                                     </div>
-                                                    <div className={`${isDetailValueNumber(detail.value) ? defaultBoldText : defaultTextClass} md:p-0 sm:p-[12px] text-right w-full md:w-2/3`}>
+                                                    <div className={`${isDetailValueNumber(detail.value) ? defaultBoldText : defaultTextClass} md:p-0 sm:p-[12px] mt-[2px] text-right w-1/2`}>
                                                         {isDetailValueNumber(detail.value) ? currencyFormat(detail.value as number) 
                                                         : detail.value}
                                                     </div>
