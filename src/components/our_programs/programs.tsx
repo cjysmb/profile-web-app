@@ -4,7 +4,7 @@ import { defaultTextClass } from "../../styles/common";
 import Quote from "../../assets/icons/programs/quote.svg";
 import { CommonHeader } from "../../layout/common";
 import { HorizontalLine } from "../../views/Home";
-import { DetailsProps, ProgramProps } from "./types";
+import { DetailsProps, ProgramItemProps, ProgramProps } from "./types";
 
 export const buttonClass = (activeButton:number, buttonNumber: number, buttonShape: string, padding: string) => {
     return `font-bold border-[#5B7D7E]
@@ -32,12 +32,12 @@ export const Programs = () => {
             padding: "px-[8px] py-[12px] md:px-[12px] md:py-[16px]"
         },
         {
-            buttonText: "Healthy Eating",
+            buttonText: "Fitness Coaching",
             buttonShape: "",
             padding: "p-[12px] md:px-[12px] md:py-[16px]"
         },
         {
-            buttonText: "Joyful Movement",
+            buttonText: "Healthy Eating",
             buttonShape: "rounded-r-[20px]",
             padding: "p-[12px] md:px-[12px] md:py-[16px]"
         }
@@ -113,13 +113,34 @@ export const Programs = () => {
                                                 </span>
                                             </div>
                                             <ul className="space-y-3 mt-[12px] md:mt-[20px] list-none">
-                                                {program.items.map((list: string, index: number) => (
-                                                    <li className="flex items-start" key={`program-list-${index}`}>
-                                                        <div className="mt-2 mr-4 w-2 h-2 bg-[#728C69] rounded-full shrink-0" />
-                                                        <span className={defaultTextClass}>
-                                                            {list}
-                                                        </span>
-                                                    </li>
+                                                {program.items.map((list: ProgramItemProps, index: number) => (
+                                                    list.subItem.length > 0 ? (
+                                                        <li className="w-full" key={`program-list-${index}`}>
+                                                            <div className="flex items-start">
+                                                                <div className="mt-2 mr-4 w-2 h-2 bg-[#728C69] rounded-full shrink-0" />
+                                                                <span className={defaultTextClass}>
+                                                                    {list.mainItem}
+                                                                </span>
+                                                            </div>
+                                                            <ul className="mt-[12px] ml-[24px] list-none">
+                                                            {list.subItem.map((subItem, subIndex) => (
+                                                                <li className="flex items-start" key={`program-sub-list-${index}-${subIndex}`}>
+                                                                    <div className="mt-2 mr-4 w-2 h-2 bg-[#728C69] rounded-full shrink-0" />
+                                                                    <span className={defaultTextClass}>
+                                                                        {subItem}
+                                                                    </span>
+                                                                </li>
+                                                            ))}
+                                                            </ul>
+                                                        </li>
+                                                    ) : (
+                                                        <li className="flex items-start" key={`program-list-${index}`}>
+                                                            <div className="mt-2 mr-4 w-2 h-2 bg-[#728C69] rounded-full shrink-0" />
+                                                            <span className={defaultTextClass}>
+                                                                {list.mainItem}
+                                                            </span>
+                                                        </li>
+                                                    )
                                                 ))}
                                             </ul>
                                         </div>
@@ -128,17 +149,15 @@ export const Programs = () => {
                                         mt-[16px]
                                         md:mt-[20px]
                                         xl:w-[40%]
-                                        2xl:w-[30%]">
+                                        rounded-[16px]
+                                        border border-[#EAF8F8] bg-[#EAF8F8] p-[12px]">
                                             {program.details.map((detail: DetailsProps, i: number) => (
-                                                <div className={`flex flex-col sm:flex-row 
-                                                    ${i === 0 ? 'bg-[#EAF8F8] rounded-tl-[16px] rounded-tr-[16px]' 
-                                                    : 'bg-[#E6ECE3] rounded-bl-[16px] rounded-br-[16px]'}`} key={`program-detail-${i}`}>
-                                                    <div className={`${defaultTextClass} p-[12px] pb-0 sm:p-[12px] w-1/3`}>
+                                                <div className='flex flex-col sm:flex-row' key={`program-detail-${i}`}>
+                                                    <div className={`${defaultTextClass} py-[4px] w-1/3`}>
                                                         {detail.name}
                                                     </div>
-                                                    <div className={`${defaultTextClass} px-[12px] pb-[12px] pt-0 sm:p-[12px] text-right w-full md:w-2/3`}>
-                                                        {isDetailValueNumber(detail.value) && !detail.value2 ? currencyFormat(detail.value as number) 
-                                                        : isDetailValueNumber(detail.value) && isDetailValueNumber(detail.value2) ? currencyFormat(detail.value as number) + " / " + currencyFormat(detail.value2 as number)
+                                                    <div className={`${isDetailValueNumber(detail.value) ? defaultBoldText : defaultTextClass} md:p-0 sm:p-[12px] text-right w-full md:w-2/3`}>
+                                                        {isDetailValueNumber(detail.value) ? currencyFormat(detail.value as number) 
                                                         : detail.value}
                                                     </div>
                                                 </div>
@@ -149,7 +168,7 @@ export const Programs = () => {
                                         <div className={defaultBoldText}>
                                             {program.testimonial.name}
                                         </div>
-                                        <div className={`${defaultTextClass} w-full md:w-[70%] mt-2`}>
+                                        <div className={`${defaultTextClass} w-full md:w-[60%] mt-2`}>
                                             {program.testimonial.statement}
                                         </div>
                                         <div className="block absolute right-0 top-0 w-[57px] md:w-auto">
