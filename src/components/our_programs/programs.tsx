@@ -43,7 +43,8 @@ export const Programs = () => {
         }
     ];
 
-    const defaultBoldText = "text-[#2D302D] font-bold text-[16px]";
+    const defaultBoldText = "text-[#2D302D] font-bold text-[14px] md:text-[16px]";
+    const defaultSemiBoldText = "text-[#2D302D] font-semibold text-[14px] md:text-[16px]";
     const programHeaderText = "text-[#5B7D7E] font-bold text-[18px]";
 
     const currencyFormat = (value: number) => {
@@ -156,7 +157,7 @@ export const Programs = () => {
                                                     <div className={`${defaultTextClass} py-[4px] w-1/2`}>
                                                         {detail.name}
                                                     </div>
-                                                    <div className={`${isDetailValueNumber(detail.value) ? defaultBoldText : defaultTextClass} md:p-0 sm:p-[12px] mt-[2px] text-right w-1/2`}>
+                                                    <div className={`${isDetailValueNumber(detail.value) ? defaultSemiBoldText : defaultTextClass} md:p-0 sm:p-[12px] mt-[2px] text-right w-1/2`}>
                                                         {isDetailValueNumber(detail.value) ? currencyFormat(detail.value as number) 
                                                         : detail.value}
                                                     </div>
