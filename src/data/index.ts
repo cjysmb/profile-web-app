@@ -127,11 +127,11 @@ export const OurPrograms = {
                {
                 mainItem: "Learn and experience a different type of exercise in each session:",
                 subItem: [
-                    "Mobility and Flexibility",
-                    "Core and Balance Training",
-                    "Bodyweight Exercises",
-                    "Strength Training",
-                    "Cardio Exercises"
+                    "Mobility and flexibility",
+                    "Core and balance training",
+                    "Bodyweight exercises",
+                    "Strength training",
+                    "Cardio exercises"
                 ]
                }
             ],

@@ -91,12 +91,12 @@ export const ContactUs = () => {
             <div className="hidden md:block absolute bottom-0 left-0 z-0">
                 <img src={VectorLeft} alt="vector left" className="opacity-50" />
             </div>
-            <CommonHeader title="Contact Us" />
-            <div className="w-full md:w-[600px] relative">
+            <CommonHeader title="Contact us for a free foundation session!" textAlign="text-center" />
+            <div className="w-full md:w-[650px] relative">
                 <div className="flex flex-col md:flex-row">
                     {data.map((item, key) => {
                         return (
-                            <div className="p-4 w-full lg:w-[200px]" key={"input"+key}>
+                            <div className="p-4 w-full lg:w-[300px]" key={"input"+key}>
                                 <input placeholder={item.text} type={item.type}
                                     name={item.name} value={item.value}
                                     onChange={(e) => e.target.value.length <= item.maxLength && handleChange(e)}
