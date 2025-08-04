@@ -1,14 +1,14 @@
 import { Testimonials } from "../../data";
+import { HorizontalLine } from "../../views/Home";
 import { FeedbackProps } from "./types";
 
-// md:ml-[36px] 
-export const Feedback = () => {
-    const titleClass = `rounded-tl-[48px] rounded-tr-[48px] uppercase text-white font-bold bg-[#A9BDA1] 
+export const titleClass = `rounded-tl-[48px] rounded-tr-[48px] uppercase text-white font-bold bg-[#A9BDA1] 
     py-[16px] px-[48px] text-center
     text-[14px] md:text-[20px]
     w-[250px] md:w-[320px]
     md:ml-[36px]
     `;
+export const Feedback = () => {
     const  nameClass = "text-[#2D302D] text-left font-semibold text-[16px] leading-[20px]";
     const statementClass = "text-[#2D302D] text-left text-pretty w-full italic mt-2 font-normal text-[16px] leading-[20px]";
 
@@ -17,10 +17,11 @@ export const Feedback = () => {
         relative
         z-10
         px-[26px]
-        mt-[50px]
-        md:px-20 md:mt-[100px]
+        pb-[50px]
+        md:px-20 md:pb-[100px]
         xl:px-[120px]
         ">
+            <HorizontalLine />
             <div className="w-full 2xl:w-3/4">
                 <div className="w-full flex justify-center lg:justify-start">
                     <div className={titleClass}>

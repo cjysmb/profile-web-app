@@ -17,6 +17,8 @@ export const buttonClass = (activeButton:number, buttonNumber: number, buttonSha
     `;
 };
 
+export const programHeaderText = "text-[#5B7D7E] font-bold text-[18px]";
+
 export const Programs = () => {
 
     const [activeButton, setActiveButton] = useState(1);
@@ -45,7 +47,6 @@ export const Programs = () => {
 
     const defaultBoldText = "text-[#2D302D] font-bold text-[14px] md:text-[16px]";
     const defaultSemiBoldText = "text-[#2D302D] font-semibold text-[14px] md:text-[16px]";
-    const programHeaderText = "text-[#5B7D7E] font-bold text-[18px]";
 
     const currencyFormat = (value: number) => {
         const currency = Intl.NumberFormat('en-US', {
