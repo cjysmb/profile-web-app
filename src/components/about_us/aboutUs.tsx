@@ -1,4 +1,5 @@
 import { About } from "./about"
+import { FAQ } from "./faq";
 import { Feedback } from "./feedback";
 
 export const AboutUs = () => {
@@ -7,6 +8,7 @@ export const AboutUs = () => {
         py-[50px]
         lg:py-[100px]">
             <About />
+            <FAQ />
             <Feedback />
         </div>
     )

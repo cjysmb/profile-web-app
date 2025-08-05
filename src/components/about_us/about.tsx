@@ -39,7 +39,8 @@ export const About = () => {
         <section className="w-full snap-start relative
         flex flex-col items-center 
         px-[26px]
-        md:px-20
+        pb-[50px]
+        md:px-20 md:pb-[100px]
         xl:px-[120px]
         ">
             <HorizontalLine />

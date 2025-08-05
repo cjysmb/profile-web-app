@@ -217,3 +217,56 @@ export const FooterInfo = [
         title: "+63917 154 9039 / (02) 5310 4990"
     }
 ]
+
+export const FAQItems = [
+    {
+        question: "What is Coaching?",
+        answerBold: "Coaching is a thought-provoking and creative process that supports you in moving forward with clarity, purpose, and confidence.",
+        answerText: `Through a collaborative conversation, your coach
+                    partners with you—always holding the belief that you are naturally creative, resourceful, and
+                    whole. Together, you explore your goals, challenges, values, and possibilities in a safe and
+                    supportive space.`
+    },
+    {
+        question: "How long is a session?",
+        answerBold: "Coaching sessions are typically one hour in length and are held weekly or bi-weekly, depending on your preferences and the pace that works best for you.",
+        answerText: "This regular rhythm creates space for insight, accountability, and sustained progress."
+    },
+    {
+        question: "How many sessions do I need to see results?",
+        answerBold: "Engaging in a positive conversation with a coach during your first session can immediately help you feel more empowered and confident.",
+        answerText: "Small, practical goals or action steps can often be identified and initiated right away, depending on your perspective and readiness."
+    },
+    {
+        question: "Do I need to learn techniques such as Mind-Body Medicine or Exercise?",
+        answerBold: "Coaching itself is a valuable and supportive process that benefits clients directly.",
+        answerText: `Techniques such as Mind-Body Medicine practices or exercises may be incorporated during sessions, but
+                        only based on the client’s preference and readiness.`
+    },
+    {
+        question: "Is it only about Stress, Exercise and Healthy Eating?",
+        answerBold: `There are 7 lifestyle factors that can be brought into the coaching conversation to support your
+                    overall well-being. These include: Sleep, Relationships, Relaxation, Stress management,
+                    Movement (physical activity), Nutrition, and Environment.`,
+        answerText: `These areas are explored as relevant to your unique needs and preferences, ensuring your
+                    coaching experience is personalized and aligned with what matters most to you.`
+    },
+    {
+        question: "Can I ask the coach a question or for suggestions?",
+        answerBold: "Coaches are experts in their field and can offer informed suggestions when explicitly requested by the client.",
+        answerText: `That said, coaching is primarily about self-discovery and empowering
+                    you to find your own insights and solutions. When appropriate, the coach and client can also
+                    engage in brainstorming together to explore ideas and possibilities.`
+    },
+    {
+        question: "Where can I have my coaching sessions?",
+        answerBold: "",
+        answerText: `Coaching sessions can take place in person at Calderon Medical Clinic in Dusit Thani Manila,
+                    Makati; via Zoom video calls; or through home visits arranged based on the client’s needs.`
+    },
+    {
+        question: "What payment methods are available?",
+        answerBold: "",
+        answerText: "We accept credit card, bank transfer, e-wallets (GCash), and cash for in-person sessions."
+    }
+]
