@@ -17,6 +17,20 @@ export const FAQ = () => {
       setActiveId(id);
     }
 
+    const renderBoldText = (text: string) => {
+        const parts = text.split(/(<b>.*?<\/b>)/g);
+        return parts.map((part, i) => {
+            if (part.startsWith("<b>") && part.endsWith("</b>")) {
+            return (
+                <span key={i} className="font-bold">
+                {part.replace(/<\/?b>/g, "")}
+                </span>
+            );
+            }
+            return <span key={i}>{part}</span>;
+        });
+    }
+
     return (
         <section className="w-full snap-start relative
                 flex flex-col items-center 
@@ -40,7 +54,7 @@ export const FAQ = () => {
                                 <AccordionItem key={index} title={item.question} isActive={activeId === index} itemId={index} handleToggle={handleToggle} isLast={isLast}>
                                     {newFormat ? (
                                         <>
-                                            <p className="mb-[8px] text-pretty">{item.answerBold}</p>
+                                            <p className="mb-[8px] text-pretty">{renderBoldText(item.answerBold)}</p>
                                             <p className="text-pretty">{item.answerText}</p>
                                         </>
                                     ) : (

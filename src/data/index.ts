@@ -238,7 +238,7 @@ export const FAQItems = [
         answerText: "Small, practical goals or action steps can often be identified and initiated right away, depending on your perspective and readiness."
     },
     {
-        question: "Do I need to learn techniques such as Mind-Body Medicine or Exercise?",
+        question: "Do I need to learn techniques such as Mind-Body Medicine or Exercises?",
         answerBold: "Coaching itself is a valuable and supportive process that benefits clients directly.",
         answerText: `Techniques such as Mind-Body Medicine practices or exercises may be incorporated during sessions, but
                         only based on the client’s preference and readiness.`
@@ -246,8 +246,7 @@ export const FAQItems = [
     {
         question: "Is it only about Stress, Exercise and Healthy Eating?",
         answerBold: `There are 7 lifestyle factors that can be brought into the coaching conversation to support your
-                    overall well-being. These include: Sleep, Relationships, Relaxation, Stress management,
-                    Movement (physical activity), Nutrition, and Environment.`,
+                    overall well-being. These include: <b>Sleep, Relationships, Relaxation, Stress, Movement (physical activity), Nutrition, and Environment.</b>`,
         answerText: `These areas are explored as relevant to your unique needs and preferences, ensuring your
                     coaching experience is personalized and aligned with what matters most to you.`
     },
