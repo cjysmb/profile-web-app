@@ -1,4 +1,5 @@
-import Logo from '../assets/icons/footer/Logo.svg';
+import { Instagram } from '../assets/icons/footer';
+import Logo from '../assets/icons/footer/logo.svg';
 import { FooterInfo } from '../data';
 
 interface FooterInfoType {
@@ -30,7 +31,7 @@ export const Footer = () => {
             <div className="w-full mt-[40px] md:mt-0">
             {FooterInfo.map((info: FooterInfoType, index: number) => (
                 <div key={info.type+index} className="mt-[16px] flex justify-start">
-                    <img src={info.icon} alt={info.type + "icon"} className="mr-[12px] md:mr-[16px]" />
+                    <img src={info.icon} alt={info.type + "-icon"} className="mr-[12px] md:mr-[16px]" />
                     {info.type === "location" ? (
                         <span
                             onClick={onClickLocation}
@@ -45,7 +46,19 @@ export const Footer = () => {
                     )}
                 </div>
             ))}
-            </div>
+                <div className="mt-[26px]">
+                    <h6 className="font-bold text-[18px] text-white">Follow us</h6>
+                    <div className="flex justify-start">
+                        <img src={Instagram} alt={ "instagram-icon"} className="mr-[12px] md:mr-[16px]" />
+                        <span className={textClass}>
+                            <a className="text-white" href="https://www.instagram.com/compassionate.coaches/" target="_blank" rel="noopener noreferrer">
+                                @compassionate.coaches
+                            </a>
+                        </span>
+                    </div>
+                   
+                </div>
+            </div>  
         </section>
     )
 }
