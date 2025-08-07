@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "../assets/icons/header/logo.svg";
+import Logo from "../assets/icons/header/header_logo.svg";
 import Check from "../assets/icons/header/check.png";
 import PcHeader from "../assets/icons/header/model.svg";
 import MobileHeader from "../assets/icons/header/headerBg.svg";
