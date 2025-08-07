@@ -1,7 +1,7 @@
 
 import Smiley from "./smile.svg";
-import People from "./people.svg";
-import Plant from "./plant.svg";
+import People from "./coaching.svg";
+import Plant from "./teamwork.svg";
 import Eclipse from "./eclipse_br.svg";
 import Logo from "./green_logo.svg";
 import Caret from "./caret.svg";
