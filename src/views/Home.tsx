@@ -1,10 +1,10 @@
-import { AboutUs } from "../components/about_us/aboutUs";
-import { Footer } from "../components/footer";
-import { Header } from "../components/header";
-import { OurProgram } from "../components/our_programs/ourProgram";
+import { AboutUs } from "../components/about_us/AboutUsSection";
+import { Footer } from "../components/FooterComponent";
+import { Header } from "../components/HeaderComponent";
+import { OurProgram } from "../components/our_programs/OurProgramSection";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
-import { ContactUs } from "../components/contactUs";
+import { ContactUs } from "../components/ContactUsSection";
 import { MobileHorizontalLine, PcHorizontalLine } from "../assets/icons/about";
 
 export const  HorizontalLine = () => {

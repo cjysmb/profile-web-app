@@ -1,6 +1,6 @@
 import { ReactNode, FC } from 'react';
 import { Caret } from '../../../assets/icons/about';
-import { programHeaderText } from '../../our_programs/programs';
+import { programHeaderText } from '../../our_programs/ProgramSection';
 
 interface AccordionItemProps {
   title: string;

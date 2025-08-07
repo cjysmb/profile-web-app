@@ -1,5 +1,5 @@
 
-import Smiley from "./smiley.svg";
+import Smiley from "./smile.svg";
 import People from "./people.svg";
 import Plant from "./plant.svg";
 import Eclipse from "./eclipse_br.svg";

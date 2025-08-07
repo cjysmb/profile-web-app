@@ -1,5 +1,5 @@
-import { Programs } from "./programs";
-import { Coaches } from "./coaches";
+import { Programs } from "./ProgramSection";
+import { Coaches } from "./CoachesSection";
 
 export const OurProgram = () => {
   return (
