@@ -1,10 +1,7 @@
 import { useState } from "react";
-import Logo from "../assets/icons/header/header_logo.svg";
-import Check from "../assets/icons/header/check.png";
-import PcHeader from "../assets/icons/header/model.svg";
-import MobileHeader from "../assets/icons/header/headerBg.svg";
 import { Mission, Vision } from "../data";
 import { CommonHeader } from "../layout/common";
+import{ Check, HeaderBackground, HeaderLogo, Model } from "../assets/icons/header";
 
 export const Header = () => {
     const [activeButton, setActiveButton] = useState(1);
@@ -42,7 +39,7 @@ export const Header = () => {
                 {/* header icon */}
                 <div className="flex items-start">
                     <a href="/">
-                        <img src={Logo} alt="Logo" />
+                        <img src={HeaderLogo} alt="Logo" />
                     </a>
                 </div>
                 {/* mission vision button */}
@@ -81,12 +78,12 @@ export const Header = () => {
                     )}
 
                 <div className="block xl:hidden absolute top-0 right-0">
-                    <img src={MobileHeader} alt="mobileHeader" className="w-[150px] md:w-[300px]" />
+                    <img src={HeaderBackground} alt="mobileHeader" className="w-[150px] md:w-[300px]" />
                 </div>
             </div>
             <div className="hidden xl:block w-1/2 
             ">
-                <img src={PcHeader} alt="Model" className="object-cover w-full h-full"/>
+                <img src={Model} alt="Model" className="object-cover w-full h-full"/>
             </div>
         </section>
     );
