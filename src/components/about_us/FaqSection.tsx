@@ -2,7 +2,7 @@ import { useState } from "react";
 import { HorizontalLine } from "../../views/Home";
 import { AccordionItem } from "./faq/AccordionItem";
 import { FAQItems } from "../../data";
-import { titleClass } from "./feedback";
+import { titleClass } from "./FeedbackSection";
 
 interface FAQItemProps {
     question: string;

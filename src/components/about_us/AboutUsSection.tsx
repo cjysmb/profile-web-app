@@ -1,6 +1,6 @@
-import { About } from "./about"
-import { FAQ } from "./faq";
-import { Feedback } from "./feedback";
+import { About } from "./AboutSection"
+import { FAQ } from "./FaqSection";
+import { Feedback } from "./FeedbackSection";
 
 export const AboutUs = () => {
     return (

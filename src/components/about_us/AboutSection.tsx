@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AboutUs } from "../../data";
-import { buttonClass } from "../our_programs/programs";
+import { buttonClass } from "../our_programs/ProgramSection";
 import { CommonHeader } from "../../layout/common";
 import { HorizontalLine } from "../../views/Home";
 import { AboutUsPros } from "./types";

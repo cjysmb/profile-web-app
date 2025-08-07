@@ -1,8 +1,7 @@
 import { useState } from "react";
-import VectorRight from "../assets/images/contact/VectorRight.svg";
-import VectorLeft from "../assets/images/contact/VectorLeft.svg";
-import emailjs from 'emailjs-com';
+import { VectorLeft, VectorRight } from "../assets/images/contact";
 import { CommonHeader } from "../layout/common";
+import emailjs from 'emailjs-com';
 
 export const ContactUs = () => {
     const env = import.meta.env;
