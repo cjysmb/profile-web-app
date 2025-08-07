@@ -1,5 +1,4 @@
-import { Instagram } from '../assets/icons/footer';
-import Logo from '../assets/icons/footer/logo.svg';
+import { Instagram, Logo } from '../assets/icons/footer';
 import { FooterInfo } from '../data';
 
 interface FooterInfoType {
