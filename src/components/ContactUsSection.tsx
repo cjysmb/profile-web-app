@@ -64,7 +64,7 @@ export const ContactUs = () => {
     const clearTooltip = () => {
         const id = setTimeout(() => {
             setTooltip({ message: "", type: null });
-        }, 3000); // Clear tooltip after 3 seconds
+        }, 3000) as unknown as number; // Clear tooltip after 3 seconds
         setTimeoutId(id);
     }
 
