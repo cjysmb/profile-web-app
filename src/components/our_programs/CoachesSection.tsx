@@ -17,7 +17,6 @@ export const Coaches = () => {
         <div className="relative w-full flex relative
         px-[26px]
         xl:px-[120px]
-        2xl:pb-40
         ">
             <div className="w-full flex flex-col items-center py-5">
                 <CommonHeader title={coachesLength > 1 ? OurCoaches.title2 : OurCoaches.title} />
@@ -31,7 +30,7 @@ export const Coaches = () => {
                             xl:w-[70%]
                             2xl:w-[920px]" key={"coach"+index}>
                                 <div className="bg-[#fff] rounded-full relative w-[200px] h-[200px]">
-                                    <img src={coach.img} alt={coach.name} className="rounded-full relative w-[200px] h-[200px]" />
+                                    <img src={coach.img} alt={coach.name} loading="lazy" className="rounded-full relative w-[200px] h-[200px]" />
                                 </div>
                                 <div className="flex flex-col item-start
                                 w-full

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { VectorLeft, VectorRight } from "../assets/images/contact";
 import { CommonHeader } from "../layout/common";
 import emailjs from 'emailjs-com';
@@ -11,14 +11,23 @@ export const ContactUs = () => {
         mobile: '',
         message: ''
     });
-    
+
     const [tooltip, setTooltip] = useState<{ message: string; type: "success" | "error" | null }>({
         message: "",
         type: null,
     });
 
     const [loading, setIsLoading] = useState(false);
+    const [timeoutId, setTimeoutId] = useState<number | null>(null);
 
+    // Cleanup timeout on unmount
+    useEffect(() => {
+        return () => {
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
+        };
+    }, [timeoutId]);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -31,10 +40,10 @@ export const ContactUs = () => {
         e.preventDefault();
         console.log('Form submitted:', formData);
           emailjs.send(
-            env.VITE_EMAILJS_SERVICE_ID, 
+            env.VITE_EMAILJS_SERVICE_ID,
             env.VITE_EMAILJS_TEMPLATE_ID,
             formData,
-            env.VITE_EMAILJS_PUBLIC_KEY 
+            env.VITE_EMAILJS_PUBLIC_KEY
             ).then(
             () => {
                 setTooltip({ message: "✅ Message sent!", type: "success" });
@@ -53,9 +62,10 @@ export const ContactUs = () => {
     };
 
     const clearTooltip = () => {
-        setTimeout(() => {
+        const id = setTimeout(() => {
             setTooltip({ message: "", type: null });
-        }, 3000); // Clear tooltip after 3 seconds
+        }, 3000) as unknown as number; // Clear tooltip after 3 seconds
+        setTimeoutId(id);
     }
 
     const data = [

@@ -4,7 +4,7 @@ import { Pin, Phone } from "../assets/icons/footer";
 import Johannes from "../assets/images/coaches/johannes.svg";
 
 export const Mission = {
-    title: "To support individuals in achieving better overall health through:",
+    title: "To support individuals in achieving better overall health.",
     items: [
         "Sustainable stress management",
         "Improved physical fitness",
@@ -199,7 +199,9 @@ export const OurCoaches = {
                 "B.S Sports Science",
                 "10 years of Personal Fitness Training experience",
                 "Certified Functional Medicine Health Coach",
-                "Advance Training for Mind-Body Medicine"
+                "Advance Training for Mind-Body Medicine",
+                "Certified Wellness at Work Specialist "
+
             ]
         }
     ]
@@ -237,14 +239,14 @@ export const FAQItems = [
         answerBold: "Engaging in a positive conversation with a coach during your first session can immediately help you feel more empowered and confident.",
         answerText: "Small, practical goals or action steps can often be identified and initiated right away, depending on your perspective and readiness."
     },
+    // {
+    //     question: "Do I need to learn techniques such as Mind-Body Medicine or Exercises?",
+    //     answerBold: "Coaching itself is a valuable and supportive process that benefits clients directly.",
+    //     answerText: `Techniques such as Mind-Body Medicine practices or exercises may be incorporated during sessions, but
+    //                     only based on the client’s preference and readiness.`
+    // },
     {
-        question: "Do I need to learn techniques such as Mind-Body Medicine or Exercises?",
-        answerBold: "Coaching itself is a valuable and supportive process that benefits clients directly.",
-        answerText: `Techniques such as Mind-Body Medicine practices or exercises may be incorporated during sessions, but
-                        only based on the client’s preference and readiness.`
-    },
-    {
-        question: "Is it only about Stress, Exercise and Healthy Eating?",
+        question: "What is the focus of the coaching sessions?",
         answerBold: `There are 7 lifestyle factors that can be brought into the coaching conversation to support your
                     overall well-being. These include: <b>Sleep, Relationships, Relaxation, Stress, Movement (physical activity), Nutrition, and Environment.</b>`,
         answerText: `These areas are explored as relevant to your unique needs and preferences, ensuring your
@@ -262,6 +264,11 @@ export const FAQItems = [
         answerBold: "",
         answerText: `Coaching sessions can take place in person at Calderon Medical Clinic in Dusit Thani Manila,
                     Makati; via Zoom video calls; or through home visits arranged based on the client’s needs.`
+    },
+    {
+        question: "How much is a session?",
+        answerBold: "Session rates start at PHP 5'000",
+        answerText: "For information on discounts and package options, please contact us directly."
     },
     {
         question: "What payment methods are available?",

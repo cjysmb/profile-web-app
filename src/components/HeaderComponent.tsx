@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Mission, Vision } from "../data";
 import { CommonHeader } from "../layout/common";
-import{ Check, HeaderBackground, HeaderLogo, Model } from "../assets/icons/header";
+import{ HeaderBackground, HeaderLogo, Model } from "../assets/icons/header";
 
 export const Header = () => {
     const [activeButton, setActiveButton] = useState(1);
@@ -57,9 +57,9 @@ export const Header = () => {
                         // mission content
                         <div className="w-full">
                             <div className='w-[300px] md:w-[400px] lg:w-[500px] xl:w-full'>
-                                <CommonHeader title={Mission.title} textSize="text-[16px] md:text-[24px] lg:text-[32px] "/>
+                                <CommonHeader title={Mission.title} textSize="text-[24px] lg:text-[32px] "/>
                             </div>
-                            <ul className="space-y-3 mt-8 list-none">
+                            {/* <ul className="space-y-3 mt-8 list-none">
                             {Mission.items.map((item, index) => (
                                 <li className="flex items-start mt-[16px]" key={"mission" + index}>
                                     <img src={Check} alt="check" className="mt-1 mr-4" />
@@ -68,7 +68,7 @@ export const Header = () => {
                                     </span>
                                 </li>
                             ))}
-                            </ul>
+                            </ul> */}
                         </div>
                     ) : (
                         // vision content
