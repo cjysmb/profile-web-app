@@ -247,16 +247,6 @@ export const FAQItems = [
     // },
     {
         question: "What is the focus of the coaching sessions?",
-        answerBold: `There are 7 lifestyle factors that can be brought into the coaching conversation to support your overall well-being. These include: Sleep, Relationships, Relaxation, Stress, Movement (physical activity), Nutrition, and Environment.`,
-        answerText: `These areas are explored as relevant to your unique needs and preferences, ensuring your coaching experience is personalized and aligned with what matters most to you.`
-    },
-    {
-        question: "How much is a session?",
-        answerBold: "Session rates start at PHP 5'000",
-        answerText: "For information on discounts and package options, please contact us directly."
-    },
-    {
-        question: "Is it only about Stress, Exercise and Healthy Eating?",
         answerBold: `There are 7 lifestyle factors that can be brought into the coaching conversation to support your
                     overall well-being. These include: <b>Sleep, Relationships, Relaxation, Stress, Movement (physical activity), Nutrition, and Environment.</b>`,
         answerText: `These areas are explored as relevant to your unique needs and preferences, ensuring your
@@ -274,6 +264,11 @@ export const FAQItems = [
         answerBold: "",
         answerText: `Coaching sessions can take place in person at Calderon Medical Clinic in Dusit Thani Manila,
                     Makati; via Zoom video calls; or through home visits arranged based on the client’s needs.`
+    },
+    {
+        question: "How much is a session?",
+        answerBold: "Session rates start at PHP 5'000",
+        answerText: "For information on discounts and package options, please contact us directly."
     },
     {
         question: "What payment methods are available?",

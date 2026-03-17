@@ -39,7 +39,7 @@ export const FAQ = () => {
         }));
     }, []);
 
-    const newFormatIds = [3, 4]; // Example condition for new format, adjust as needed
+    const newFormatIds = ["What is the focus of the coaching sessions?",  "How much is a session?"]; // Example condition for new format, adjust as needed
 
     return (
         <section className="w-full snap-start relative
@@ -62,7 +62,7 @@ export const FAQ = () => {
                             const memoizedAnswer = memoizedAnswers[index];
                             return (
                                 <AccordionItem key={index} title={item.question} isActive={activeId === index} itemId={index} handleToggle={handleToggle} isLast={isLast}>
-                                    {newFormatIds.includes(index) ? (
+                                    {newFormatIds.includes(item.question) ? (
                                         <>
                                             <p className="mb-[8px] text-pretty">{memoizedAnswer.answerBold}</p>
                                             <p className="text-pretty">{memoizedAnswer.answerText}</p>
