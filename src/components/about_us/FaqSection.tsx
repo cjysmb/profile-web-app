@@ -39,6 +39,8 @@ export const FAQ = () => {
         }));
     }, []);
 
+    const newFormatIds = [3, 4]; // Example condition for new format, adjust as needed
+
     return (
         <section className="w-full snap-start relative
                 flex flex-col items-center
@@ -57,11 +59,10 @@ export const FAQ = () => {
                     <div className="bg-[#fff] rounded-[48px] shadow-2xl">
                         {FAQItems.map((item: FAQItemProps, index) => {
                             const isLast = index === FAQItems.length - 1;
-                            const newFormat = index === 4;
                             const memoizedAnswer = memoizedAnswers[index];
                             return (
                                 <AccordionItem key={index} title={item.question} isActive={activeId === index} itemId={index} handleToggle={handleToggle} isLast={isLast}>
-                                    {newFormat ? (
+                                    {newFormatIds.includes(index) ? (
                                         <>
                                             <p className="mb-[8px] text-pretty">{memoizedAnswer.answerBold}</p>
                                             <p className="text-pretty">{memoizedAnswer.answerText}</p>

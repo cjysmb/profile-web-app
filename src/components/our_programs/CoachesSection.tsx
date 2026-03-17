@@ -17,7 +17,6 @@ export const Coaches = () => {
         <div className="relative w-full flex relative
         px-[26px]
         xl:px-[120px]
-        2xl:pb-40
         ">
             <div className="w-full flex flex-col items-center py-5">
                 <CommonHeader title={coachesLength > 1 ? OurCoaches.title2 : OurCoaches.title} />
