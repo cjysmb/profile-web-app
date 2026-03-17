@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { HorizontalLine } from "../../views/Home";
 import { AccordionItem } from "./faq/AccordionItem";
 import { FAQItems } from "../../data";
@@ -31,9 +31,17 @@ export const FAQ = () => {
         });
     }
 
+    // Memoize bold text rendering for each FAQ item to avoid reprocessing
+    const memoizedAnswers = useMemo(() => {
+        return FAQItems.map((item) => ({
+            answerBold: renderBoldText(item.answerBold),
+            answerText: item.answerText
+        }));
+    }, []);
+
     return (
         <section className="w-full snap-start relative
-                flex flex-col items-center 
+                flex flex-col items-center
                 px-[26px]
                 pb-[50px]
                 md:px-20 md:pb-[100px]
@@ -50,12 +58,13 @@ export const FAQ = () => {
                         {FAQItems.map((item: FAQItemProps, index) => {
                             const isLast = index === FAQItems.length - 1;
                             const newFormat = index === 4;
+                            const memoizedAnswer = memoizedAnswers[index];
                             return (
                                 <AccordionItem key={index} title={item.question} isActive={activeId === index} itemId={index} handleToggle={handleToggle} isLast={isLast}>
                                     {newFormat ? (
                                         <>
-                                            <p className="mb-[8px] text-pretty">{renderBoldText(item.answerBold)}</p>
-                                            <p className="text-pretty">{item.answerText}</p>
+                                            <p className="mb-[8px] text-pretty">{memoizedAnswer.answerBold}</p>
+                                            <p className="text-pretty">{memoizedAnswer.answerText}</p>
                                         </>
                                     ) : (
                                         <>

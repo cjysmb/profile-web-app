@@ -1,4 +1,4 @@
-import { ReactNode, FC } from 'react';
+import { ReactNode, FC, memo } from 'react';
 import { Caret } from '../../../assets/icons/about';
 import { programHeaderText } from '../../our_programs/ProgramSection';
 
@@ -11,7 +11,7 @@ interface AccordionItemProps {
   isLast: boolean;
 }
 
-export const AccordionItem: FC<AccordionItemProps> = ({ title, children, isActive, itemId, handleToggle, isLast }) => {
+const AccordionItemComponent: FC<AccordionItemProps> = ({ title, children, isActive, itemId, handleToggle, isLast }) => {
   return (
     <div className={`py-[16px] px-[12px] ${!isLast && 'border-b-1 border-[#C3D1C9]'}`}>
       <button
@@ -39,3 +39,5 @@ export const AccordionItem: FC<AccordionItemProps> = ({ title, children, isActiv
     </div>
   );
 };
+
+export const AccordionItem = memo(AccordionItemComponent);

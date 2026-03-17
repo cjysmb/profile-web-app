@@ -31,7 +31,7 @@ export const Coaches = () => {
                             xl:w-[70%]
                             2xl:w-[920px]" key={"coach"+index}>
                                 <div className="bg-[#fff] rounded-full relative w-[200px] h-[200px]">
-                                    <img src={coach.img} alt={coach.name} className="rounded-full relative w-[200px] h-[200px]" />
+                                    <img src={coach.img} alt={coach.name} loading="lazy" className="rounded-full relative w-[200px] h-[200px]" />
                                 </div>
                                 <div className="flex flex-col item-start
                                 w-full
