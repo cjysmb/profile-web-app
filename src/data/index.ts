@@ -16,7 +16,7 @@ export const Vision = {
     title: "To build Healing Community",
     description: `To create a thriving, inclusive community where every individual has the
                     opportunity, support, and environment to achieve optimal health,
-                    wellbeing and a balanced life - physically, mentally socially, and
+                    wellbeing and a balanced life - physically, mentally, socially, and
                     environmentally.`
 };
 

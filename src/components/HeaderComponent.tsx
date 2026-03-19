@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Mission, Vision } from "../data";
-import { CommonHeader } from "../layout/common";
 import{ HeaderBackground, HeaderLogo, Model } from "../assets/icons/header";
 
 export const Header = () => {
@@ -17,7 +16,7 @@ export const Header = () => {
         `;
     }
 
-    const textClass = "text-[#2D302D] font-normal w-full text-[16px] md:text-[20px]";
+    const textClass = "text-[#2D302D] font-normal w-full text-[26px]";
     const buttonList = ['Mission', 'Vision'];
 
     return (
@@ -56,8 +55,11 @@ export const Header = () => {
                 {activeButton === 1 ? (
                         // mission content
                         <div className="w-full">
-                            <div className='w-[300px] md:w-[400px] lg:w-[500px] xl:w-full'>
-                                <CommonHeader title={Mission.title} textSize="text-[24px] lg:text-[32px] "/>
+                            {/* <div className='w-[300px] md:w-[400px] lg:w-[500px] xl:w-full mt-[24px]'> */}
+                            <div className="w-[90%] md:w-[70%] xl:w-[90%] mt-[24px]">
+                                {/* <CommonHeader title={Mission.title} textSize="text-[24px] lg:text-[32px] "/> */}
+                                <p className={textClass}>{Mission.title}</p>
+
                             </div>
                             {/* <ul className="space-y-3 mt-8 list-none">
                             {Mission.items.map((item, index) => (
@@ -72,7 +74,7 @@ export const Header = () => {
                         </div>
                     ) : (
                         // vision content
-                        <div className="w-[90%] md:w-[70%] xl:w-[90%] mt-[40px]">
+                        <div className="w-[90%] md:w-[70%] xl:w-[90%] mt-[24px]">
                             <p className={textClass}>{Vision.description}</p>
                         </div>
                     )}
