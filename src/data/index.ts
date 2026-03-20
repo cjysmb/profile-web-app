@@ -267,7 +267,7 @@ export const FAQItems = [
     },
     {
         question: "How much is a session?",
-        answerBold: "Session rates start at PHP 5'000",
+        answerBold: "Session rates start at PHP 5,000",
         answerText: "For information on discounts and package options, please contact us directly."
     },
     {
