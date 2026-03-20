@@ -16,7 +16,7 @@ export const Header = () => {
         `;
     }
 
-    const textClass = "text-[#2D302D] font-normal w-full text-[26px]";
+    const textClass = "text-[#2D302D] font-normal w-full text-[16px] md:text-[20px] lg:text-[26px]";
     const buttonList = ['Mission', 'Vision'];
 
     return (
