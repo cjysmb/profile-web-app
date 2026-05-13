@@ -200,7 +200,8 @@ export const OurCoaches = {
                 "10 years of Personal Fitness Training experience",
                 "Certified Functional Medicine Health Coach",
                 "Advance Training for Mind-Body Medicine",
-                "Certified Wellness at Work Specialist "
+                "Certified Wellness at Work Specialist ",
+                "National Board Certified Health and Wellness Coach"
 
             ]
         }
